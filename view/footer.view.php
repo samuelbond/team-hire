@@ -105,60 +105,111 @@
 <script src="view/js/html5shiv.js"></script>
 <!-- Main JS -->
 <script src="view/js/main.js"></script>
-
 <!-- Javascript for this page -->
-<!-- Ecommerce custom JS -->
-<script src="view/js/ecommerce.js"></script>
+<!-- Revolution slider -->
+<script src="view/js/jquery.themepunch.tools.min.js"></script>
+<script src="view/js/jquery.themepunch.revolution.min.js"></script>
+<!-- Waypoints -->
+<script src="view/js/waypoints.min.js"></script>
+<!-- jQuery CountTo -->
+<script src="view/js/jquery.countTo.js"></script>
 
-<!-- Javascript for this page -->
-<!-- Imageloaded js-->
-<script src="view/js/imagesloaded.min.js"></script>
-<!-- Masonry JS -->
-<script src="view/js/masonry.js"></script>
-
-<script type="text/javascript">
-    // Initialize Masonry
-    var $box = $('.blog-masonry').masonry();
-    // Layout Masonry again after all images have loaded
-    $box.imagesLoaded( function() {
-        $box.masonry();
-    });
-</script>
-<!-- Custom JS. Type your JS code in custom.js file -->
-<script src="view/js/custom.js"></script>
-<form id="form" method="POST" style="display:none">
-</form>
 <script>
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
-    function postData(attrName,attrValue){
-       var input  = $('<input/>',{type:'hidden',name:attrName,value:attrValue});
-        $('#form').append(input).submit();
-    }
-
-    function sendSearch()
-    {
-        var term = document.getElementById("searchTerm1").value;
-        window.location.href = 'blog/search/'+term;
-    }
-
-    function sendSearch2()
-    {
-        var term = document.getElementById("searchTerm2").value;
-        window.location.href = 'blog/search/'+term;
-    }
-
-    function contactAuthor(entryId)
-    {
-        var elem = document.getElementById("entryId");
-        elem.value = entryId;
-    }
 </script>
 
+<script type="text/javascript">
+    $(document).ready(function(){
+        // Way Points With Count To()
+        $('.number-count').waypoint(function(down){
+            if(!$(this).hasClass('stop-counter'))
+            {
+                $(this).countTo();
+                $(this).addClass('stop-counter');
+            }
+        }, {
+            offset: '90%'
+        });
+    });
+</script>
 
-<script src="view/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('.r-slider .banner').revolution({
+            delay:7000,
+            startheight:400,
+            startwidth:1000,
+            startWithSlide:0,
+
+            fullScreenAlignForce:"off",
+            autoHeight:"off",
+
+            shuffle:"off",
+
+            onHoverStop:"on",
+
+            thumbWidth:100,
+            thumbHeight:50,
+            thumbAmount:3,
+
+            hideThumbsOnMobile:"on",
+            hideNavDelayOnMobile:1500,
+            hideBulletsOnMobile:"off",
+            hideArrowsOnMobile:"off",
+            hideThumbsUnderResoluition:0,
+
+            hideThumbs:10,
+            hideTimerBar:"on",
+
+            keyboardNavigation:"on",
+
+            navigationType:"bullet",
+            navigationArrows:"solo",
+            navigationStyle:"round",
+
+            navigationHAlign:"center",
+            navigationVAlign:"bottom",
+
+            soloArrowLeftHalign:"left",
+            soloArrowLeftValign:"center",
+            soloArrowLeftHOffset:20,
+            soloArrowLeftVOffset:0,
+
+            soloArrowRightHalign:"right",
+            soloArrowRightValign:"center",
+            soloArrowRightHOffset:20,
+            soloArrowRightVOffset:0,
+
+
+            touchenabled:"on",
+            swipe_velocity:"0.7",
+            swipe_max_touches:"1",
+            swipe_min_touches:"1",
+            drag_block_vertical:"false",
+
+            stopAtSlide:-1,
+            stopAfterLoops:-1,
+            hideCaptionAtLimit:0,
+            hideAllCaptionAtLilmit:0,
+            hideSliderAtLimit:0,
+
+            dottedOverlay:"none",
+
+            spinned:"spinner4",
+
+            fullWidth:"off",
+            forceFullWidth:"off",
+            fullScreen:"off",
+            fullScreenOffsetContainer:"#topheader-to-offset",
+
+        });
+    });
+</script>
+<!-- Custom JS. Type your JS code in custom.js file -->
+<script src="view/js/custom.js"></script>
+
 
 
 <!--

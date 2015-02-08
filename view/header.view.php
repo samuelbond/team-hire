@@ -8,7 +8,7 @@
     <meta name="description" content="Your description">
     <meta name="keywords" content="Your,Keywords">
     <meta name="author" content="ResponsiveWebInc">
-    <base href="http://localhost/blog/"/>
+    <base href="http://localhost/team-hire/"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Styles -->
@@ -21,9 +21,10 @@
     <!-- Owl carousel -->
     <link href="view/css/owl.carousel.css" rel="stylesheet">
 
+
     <!-- CSS for this page -->
-    <!-- Ecommerce -->
-    <link href="view/css/styles/ecommerce.css" rel="stylesheet">
+    <!-- Revolution Slider -->
+    <link href="view/css/settings.css" rel="stylesheet">
 
     <!-- Base style -->
     <link href="view/css/styles/style.css" rel="stylesheet">
@@ -32,7 +33,6 @@
 
     <!-- Custom CSS. Type your CSS code in custom.css file -->
     <link href="view/css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="view/styles/monokai_sublime.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="#">
@@ -49,7 +49,17 @@
 <!-- Top bar starts -->
 <div class="top-bar">
     <div class="container">
-        <!-- Shopping kart ends -->
+
+        <!-- Contact starts -->
+        <div class="tb-contact pull-left">
+            <!-- Email -->
+            <i class="fa fa-envelope color"></i> &nbsp; <a href="mailto:contact@domain.com"><b>info@teamhire.co.uk</b></a>
+            &nbsp;&nbsp;
+            <!-- Phone -->
+            <i class="fa fa-phone color"></i> &nbsp; <b>+44 (78)-(1821)-0052</b>
+        </div>
+        <!-- Contact ends -->
+
 
         <?php
             if(isset($showProfileBar))
@@ -66,32 +76,6 @@
         ?>
 
 
-        <!-- Langauge starts -->
-        <div class="tb-language dropdown pull-right">
-            <a href="#" data-target="#" data-toggle="dropdown"><i class="fa fa-globe"></i> English <i class="fa fa-angle-down color"></i></a>
-            <!-- Dropdown menu with languages -->
-            <ul class="dropdown-menu dropdown-mini" role="menu">
-                <li><a >English</a></li>
-            </ul>
-        </div>
-        <!-- Language ends -->
-
-        <!-- Search section for responsive design -->
-        <div class="tb-search pull-left">
-            <a href="#" class="b-dropdown"><i class="fa fa-search square-2 rounded-1 bg-color white"></i></a>
-            <div class="b-dropdown-block">
-                <form role="form" method="get" action="blog/search">
-                    <!-- Input Group -->
-                    <div class="input-group">
-                        <input type="text" class="form-control"  placeholder="Type Something">
-									<span class="input-group-btn">
-										<button class="btn btn-color" type="button" onclick="sendSearch()">Search</button>
-									</span>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!-- Search section ends -->
 
         <!-- Social media starts -->
         <div class="tb-social pull-right">
@@ -101,7 +85,6 @@
                 <a href="#" class="twitter"><i class="fa fa-twitter square-2 rounded-1"></i></a>
                 <a href="#" class="google-plus"><i class="fa fa-google-plus square-2 rounded-1"></i></a>
                 <a href="#" class="linkedin"><i class="fa fa-linkedin square-2 rounded-1"></i></a>
-                <a href="#" class="pinterest"><i class="fa fa-pinterest square-2 rounded-1"></i></a>
             </div>
         </div>
         <!-- Social media ends -->
@@ -115,45 +98,55 @@
 <!-- Header two Starts -->
 <div class="header-2">
 
-<!-- Container -->
-<div class="container">
-<div class="row">
-<div class="col-md-4">
-    <!-- Logo section -->
-    <div class="logo">
-        <h1><a href="index"><i class="fa fa-laptop"></i> Team Hire Blog</a></h1>
-    </div>
-</div>
-<div class="col-md-9">
-
-
-
-</div>
-
-<div class="col-md-1">
-
-    <!-- Search section -->
-    <div class="head-search pull-right">
-        <a href="#" class="b-dropdown"><i class="fa fa-search square-2 rounded-1 bg-color white"></i></a>
-        <div class="b-dropdown-block">
-            <form role="form">
-                <!-- Input Group -->
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Type Something"  id="searchTerm1" value="">
-											<span class="input-group-btn">
-												<button class="btn btn-color" type="button" onclick="sendSearch()">Search</button>
-											</span>
+    <!-- Container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Logo section -->
+                <div class="logo">
+                    <h1><a href="index"><i class="fa fa-laptop"></i> Team Hire</a></h1>
                 </div>
-            </form>
+            </div>
+            <div class="col-md-9">
+                <!-- Navigation starts.  -->
+                <div class="navy">
+                    <ul>
+                        <!-- Main menu -->
+                        <li><a href="#">Home</a></li>
+
+                        <li><a href="#">About Us</a></li>
+
+                        <li><a href="#">Our Services</a></li>
+
+                        <li><a href="#">Our Team</a></li>
+
+                        <li><a href="#">Our Technologies</a></li>
+
+                        <li><a href="#">How It Works</a>
+                            <ul>
+                                <li><a href="sitemap.html">Development Process</a></li>
+                                <li><a href="index.html">Project Management</a></li>
+                                <li><a href="index-bootstrap-carousel.html">Maintenance and Change Strategy</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">Our Blog</a></li>
+
+                        <li><a href="contact-us-one.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Navigation ends -->
+            </div>
+
+            <div class="col-md-1">
+
+                <!-- Search section ends -->
+                <div class="clearfix"></div>
+
+            </div>
+
         </div>
     </div>
-    <!-- Search section ends -->
-    <div class="clearfix"></div>
-
-</div>
-
-</div>
-</div>
 </div>
 
 <!-- Header two ends -->

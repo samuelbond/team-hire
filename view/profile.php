@@ -42,7 +42,7 @@
 												<h4><?php echo $profile->getFullName(); ?></h4>
 												<div class="address">
 													<!-- Address -->
-													<p><?php echo $profile->getProfile(); ?></p>
+													<h3><?php echo $profile->getProfile(); ?></h3>
 													<!-- Email Address -->
 													<span><i class="fa fa-envelope color"></i>&nbsp; <?php echo $profile->getEmail(); ?></span>
 												</div>
@@ -50,70 +50,41 @@
 										</div>
 										<br />
                                         <div class="block-heading-two">
-                                            <h3><span>Recent Blog Entries</span></h3>
+                                            <h3><span>Update Profile</span></h3>
+                                            <small style="color:red;">Fill in Fields you want to update only</small>
                                         </div>
-										<!-- Recent Purchase Table -->
-										<div class="rptable table-responsive">
-											<table class="table table-bordered">
-												<!-- Table Header -->
-												<thead>
-                                                <tr>
-                                                    <th>Title</th>
-                                                    <th>Category</th>
-                                                    <th>Status</th>
-                                                    <th>Date Created</th>
-                                                    <th></th>
-                                                </tr>
-                                                </thead>
-                                                <!-- Table Body -->
-                                                <tbody>
 
-                                                <?php
+                                        <form method="post" action="manageprofile" enctype="multipart/form-data">
+                                            <div class="rptable table-responsive">
 
-                                                foreach($myblog as $blog)
-                                                {
-                                                    echo '
-                                            <tr>
-                                                <td>'.$blog['title'].'</td>
-                                                <td>'.$blog['category'].'</td>
-                                                <td>'.(($blog['status'] == 0) ? "Not Published" : (($blog['status'] == 2) ? "Deleted" : "Published")).'</td>
-                                                <td>'.$blog['date_created'].'</td>
-                                                <td>
-                                                <a href="editblog?edit='.$blog['id'].'" data-toggle="tooltip" title="Edit"><span class="fa fa-edit color"></span></a>
-                                                <br />
-                                                <a href="myblog?publish='.$blog['id'].'" data-toggle="tooltip" title="Publish"><span class="fa fa-print color"></span></a>
-                                                <br />
-                                                <a href="#" data-toggle="tooltip" title="Delete"><span class="fa fa-remove color"></span></a>
-                                                </td>
-                                            </tr>';
-                                                }
-                                                ?>
-                                                </tbody>
-											</table>
-										</div>
-																				
-										<!-- Pagination -->
-										<div class="shopping-pagination">
-											<ul class="pagination">
-												<?php
-                                                for($k = 1; $k < $totalPages; $k++)
-                                                {
-                                                    if($currentPage === $k)
-                                                    {
-                                                        echo '<li class="active">
-                                                        <a href="#">'.$k.' <span class="sr-only">(current)</span></a></li>';
-                                                    }
-                                                    else
-                                                    {
-                                                        echo '<li><a href="profile?page='.$k.'">'.$k.'</a></li>';
-                                                    }
+                                                <div class="form-group">
+                                                    <label for="exampleInputName">Fullname</label>
+                                                    <input type="text" name="fname" class="form-control" id="exampleInputName" placeholder="Enter Fullname">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputProfile">Title</label>
+                                                    <input type="text" class="form-control" name="profile" id="exampleInputProfile" placeholder="Your New Profile" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputProfilePicture">Profile Picture</label>
+                                                    <input type="file" name="profilepicture" id="exampleInputProfilePicture">
+                                                </div>
 
-                                                }
-                                                ?>
+                                                <div class="form-group">
+                                                    <label style="color:#ff0000;">To Update your password, please enter your current password and new password</label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputPassword">Current Password</label>
+                                                    <input type="password" name="oldpass" class="form-control" id="exampleInputPassword" placeholder="Enter your current password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputPassword1">New Password</label>
+                                                    <input type="password" name="newpass" class="form-control" id="exampleInputPassword1" placeholder="Enter your new password">
+                                                </div>
+                                            </div>
 
-											</ul>
-										</div>
-										<!-- Pagination end-->
+                                            <button type="submit" class="btn btn-primary">Update Profile</button>
+                                        </form>
 										
 									</div>
 								</div>
@@ -129,11 +100,7 @@
 									<!-- Sidebar Menu -->
 									<ul class="account-nav">
 										<li><a href="profile">My Profile</a></li>
-                                        <li><a href="manageprofile">Manage Profile</a></li>
 										<li><a href="manageusers">Manage Users</a></li>
-										<li><a href="myblog">My Blog</a></li>
-                                        <li><a href="publishblog">Publish Alerts</a></li>
-                                        <li><a href="publishcomment">Blog Comments</a></li>
 									</ul>
 
 									</div>

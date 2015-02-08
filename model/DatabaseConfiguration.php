@@ -24,7 +24,7 @@ class DatabaseConfiguration {
             "port"          =>  "3307",
             "username"      => "root",
             "password"      => "root",
-            "database"      => "blog",
+            "database"      => "team_hire",
             "charset"       => "latin1",
         ),
         "bluehost" => array(

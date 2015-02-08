@@ -102,7 +102,7 @@ class manageprofileController extends UserRelatedController{
                 $profile->useDefaultProfilePicture();
             }
             $this->registry->template->profile = $profile;
-            $this->registry->template->loadView("manageprofile");
+            $this->registry->template->loadView("profile");
             return;
         }
 

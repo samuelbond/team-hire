@@ -20,7 +20,7 @@ Abstract class BaseController {
 
     protected $arguments;
 
-    protected $pageTitle = "Welcome to The Team Hire Blog";
+    protected $pageTitle = "Hire a Software Development Team";
 
 
     /**
