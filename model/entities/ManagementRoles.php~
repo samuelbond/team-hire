@@ -1,0 +1,67 @@
+<?php
+
+namespace model\entities;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ManagementRoles
+ *
+ * @Table(name="management_roles", indexes={@Index(name="fk_management_roles_1_idx", columns={"user_role"})})
+ * @Entity
+ */
+class ManagementRoles
+{
+    /**
+     * @var integer
+     *
+     * @Column(name="id", type="integer", nullable=false)
+     * @Id
+     * @GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \model\entities\UserTypes
+     *
+     * @ManyToOne(targetEntity="UserTypes")
+     * @JoinColumns({
+     *   @JoinColumn(name="user_role", referencedColumnName="id")
+     * })
+     */
+    private $userRole;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set userRole
+     *
+     * @param \model\entities\UserTypes $userRole
+     * @return ManagementRoles
+     */
+    public function setUserRole(\model\entities\UserTypes $userRole = null)
+    {
+        $this->userRole = $userRole;
+
+        return $this;
+    }
+
+    /**
+     * Get userRole
+     *
+     * @return \model\entities\UserTypes
+     */
+    public function getUserRole()
+    {
+        return $this->userRole;
+    }
+}
