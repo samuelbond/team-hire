@@ -25,11 +25,18 @@ class UserManagerVersion1 extends UserManager implements UserManagerInterface {
         "MANAGE_PROFILE" => array("WRITER", "ADMIN"),
     );
 
+
+
     public function __construct()
     {
         @session_start();
     }
 
+    /**
+     * Log in a given user
+     * @param User $user
+     * @return bool
+     */
     public function loginUser(User $user)
     {
         $userObj = $this->dao->getUser($user);
@@ -41,6 +48,11 @@ class UserManagerVersion1 extends UserManager implements UserManagerInterface {
         return true;
     }
 
+    /**
+     * Check if a given user is logged in
+     * @param User $user
+     * @return bool
+     */
     public function isUserLoggedIn(User $user = null)
     {
 
@@ -55,6 +67,12 @@ class UserManagerVersion1 extends UserManager implements UserManagerInterface {
         return false;
     }
 
+    /**
+     * Checks if a given user has the right to perform a specific action
+     * @param $action
+     * @param User $user
+     * @return bool
+     */
     public function isUserAllowedToPerformAction($action, User $user)
     {
         if(isset($this->actions[$action]))
@@ -68,6 +86,10 @@ class UserManagerVersion1 extends UserManager implements UserManagerInterface {
         return false;
     }
 
+    /**
+     * Logs out currently logged in user
+     * @return bool
+     */
     public function logOutUser()
     {
         if(isset($_SESSION['b_user_id']))
@@ -82,6 +104,7 @@ class UserManagerVersion1 extends UserManager implements UserManagerInterface {
     }
 
     /**
+     * Gets a given user
      * @param User $user
      * @return User
      */
@@ -96,6 +119,10 @@ class UserManagerVersion1 extends UserManager implements UserManagerInterface {
         return null;
     }
 
+    /**
+     * Gets all users
+     * @return array
+     */
     public function getAllUsers()
     {
         $result = $this->dao->getAllUsers();
@@ -108,6 +135,11 @@ class UserManagerVersion1 extends UserManager implements UserManagerInterface {
         return $result;
     }
 
+    /**
+     * Creates a new user
+     * @param User $user
+     * @return bool
+     */
     public function createNewUser(User $user)
     {
         if($user->getEmail() === null || $user->getPassword() === null || $user->getFullName() === null )
@@ -120,11 +152,20 @@ class UserManagerVersion1 extends UserManager implements UserManagerInterface {
         return $result;
     }
 
+    /**
+     * Edits a given user
+     * @param User $user
+     * @return bool
+     */
     public function editUser(User $user)
     {
         return $this->dao->modifyUserDetails($user);
     }
 
+    /**
+     * Gets the id of the currently logged in user
+     * @return null|string
+     */
     public function getCurrentSessionUserId()
     {
         if(isset($_SESSION['b_user_id']))

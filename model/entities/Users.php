@@ -2,71 +2,80 @@
 
 namespace model\entities;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Users
  *
- * @Table(name="users", uniqueConstraints={@UniqueConstraint(name="email_UNIQUE", columns={"email"})}, indexes={@Index(name="fk_users_1_idx", columns={"user_type"})})
- * @Entity
+ * @ORM\Table(name="users", uniqueConstraints={@ORM\UniqueConstraint(name="email_UNIQUE", columns={"email"})}, indexes={@ORM\Index(name="fk_users_1_idx", columns={"user_type"})})
+ * @ORM\Entity
  */
 class Users
 {
     /**
      * @var integer
      *
-     * @Column(name="user_id", type="integer", nullable=false)
-     * @Id
-     * @GeneratedValue(strategy="IDENTITY")
+     * @ORM\Column(name="user_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $userId;
 
     /**
      * @var string
      *
-     * @Column(name="fullname", type="string", length=45, nullable=false)
-     */
-    private $fullname;
-
-    /**
-     * @var string
-     *
-     * @Column(name="email", type="string", length=255, nullable=false)
+     * @ORM\Column(name="email", type="string", length=255, nullable=false)
      */
     private $email;
 
     /**
      * @var string
      *
-     * @Column(name="password", type="string", length=255, nullable=false)
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
      */
     private $password;
 
     /**
      * @var string
      *
-     * @Column(name="profile", type="text", nullable=true)
+     * @ORM\Column(name="fullname", type="string", length=45, nullable=false)
+     */
+    private $fullname;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="profile", type="text", nullable=true)
      */
     private $profile;
 
     /**
      * @var string
      *
-     * @Column(name="profile_picture", type="string", length=255, nullable=true)
+     * @ORM\Column(name="profile_picture", type="string", length=255, nullable=true)
      */
     private $profilePicture;
 
     /**
      * @var integer
      *
-     * @Column(name="user_status", type="integer", nullable=false)
+     * @ORM\Column(name="status", type="integer", nullable=false)
      */
-    private $userStatus = '0';
+    private $status = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_created", type="datetime", nullable=false)
+     */
+    private $dateCreated;
 
     /**
      * @var \model\entities\UserTypes
      *
-     * @ManyToOne(targetEntity="UserTypes")
-     * @JoinColumns({
-     *   @JoinColumn(name="user_type", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="model\entities\UserTypes")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="user_type", referencedColumnName="id")
      * })
      */
     private $userType;
@@ -80,29 +89,6 @@ class Users
     public function getUserId()
     {
         return $this->userId;
-    }
-
-    /**
-     * Set fullname
-     *
-     * @param string $fullname
-     * @return Users
-     */
-    public function setFullname($fullname)
-    {
-        $this->fullname = $fullname;
-
-        return $this;
-    }
-
-    /**
-     * Get fullname
-     *
-     * @return string 
-     */
-    public function getFullname()
-    {
-        return $this->fullname;
     }
 
     /**
@@ -152,6 +138,29 @@ class Users
     }
 
     /**
+     * Set fullname
+     *
+     * @param string $fullname
+     * @return Users
+     */
+    public function setFullname($fullname)
+    {
+        $this->fullname = $fullname;
+
+        return $this;
+    }
+
+    /**
+     * Get fullname
+     *
+     * @return string 
+     */
+    public function getFullname()
+    {
+        return $this->fullname;
+    }
+
+    /**
      * Set profile
      *
      * @param string $profile
@@ -198,57 +207,27 @@ class Users
     }
 
     /**
-     * Set userStatus
+     * Set status
      *
-     * @param integer $userStatus
+     * @param integer $status
      * @return Users
      */
-    public function setUserStatus($userStatus)
+    public function setStatus($status)
     {
-        $this->userStatus = $userStatus;
+        $this->status = $status;
 
         return $this;
     }
 
     /**
-     * Get userStatus
+     * Get status
      *
      * @return integer 
      */
-    public function getUserStatus()
+    public function getStatus()
     {
-        return $this->userStatus;
+        return $this->status;
     }
-
-    /**
-     * Set userType
-     *
-     * @param \model\entities\UserTypes $userType
-     * @return Users
-     */
-    public function setUserType(\model\entities\UserTypes $userType = null)
-    {
-        $this->userType = $userType;
-
-        return $this;
-    }
-
-    /**
-     * Get userType
-     *
-     * @return \model\entities\UserTypes
-     */
-    public function getUserType()
-    {
-        return $this->userType;
-    }
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_created", type="datetime", nullable=true)
-     */
-    private $dateCreated;
-
 
     /**
      * Set dateCreated
@@ -271,5 +250,28 @@ class Users
     public function getDateCreated()
     {
         return $this->dateCreated;
+    }
+
+    /**
+     * Set userType
+     *
+     * @param \model\entities\UserTypes $userType
+     * @return Users
+     */
+    public function setUserType(\model\entities\UserTypes $userType = null)
+    {
+        $this->userType = $userType;
+
+        return $this;
+    }
+
+    /**
+     * Get userType
+     *
+     * @return \model\entities\UserTypes 
+     */
+    public function getUserType()
+    {
+        return $this->userType;
     }
 }

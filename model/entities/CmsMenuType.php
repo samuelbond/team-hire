@@ -5,12 +5,12 @@ namespace model\entities;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * BlogEntryCategory
+ * CmsMenuType
  *
- * @ORM\Table(name="blog_entry_category", uniqueConstraints={@ORM\UniqueConstraint(name="category_UNIQUE", columns={"category"})})
+ * @ORM\Table(name="cms_menu_type")
  * @ORM\Entity
  */
-class BlogEntryCategory
+class CmsMenuType
 {
     /**
      * @var integer
@@ -24,9 +24,9 @@ class BlogEntryCategory
     /**
      * @var string
      *
-     * @ORM\Column(name="category", type="string", length=45, nullable=false)
+     * @ORM\Column(name="menu_type", type="string", length=45, nullable=false)
      */
-    private $category;
+    private $menuType;
 
 
     /**
@@ -40,25 +40,25 @@ class BlogEntryCategory
     }
 
     /**
-     * Set category
+     * Set menuType
      *
-     * @param string $category
-     * @return BlogEntryCategory
+     * @param string $menuType
+     * @return CmsMenuType
      */
-    public function setCategory($category)
+    public function setMenuType($menuType)
     {
-        $this->category = $category;
+        $this->menuType = $menuType;
 
         return $this;
     }
 
     /**
-     * Get category
+     * Get menuType
      *
      * @return string 
      */
-    public function getCategory()
+    public function getMenuType()
     {
-        return $this->category;
+        return $this->menuType;
     }
 }

@@ -36,6 +36,7 @@ class DoctrineDAO extends UserManagerDAO{
         $newUser->setPassword($user->getPassword());
         $newUser->setProfile($user->getProfile());
         $newUser->setProfilePicture($user->getProfilePicture());
+        $newUser->setStatus(0);
         $type = $this->getUserType(1);
         $newUser->setUserType($type);
         $newUser->setDateCreated(new \DateTime());
@@ -96,7 +97,7 @@ class DoctrineDAO extends UserManagerDAO{
 
         if($user->getStatus() !== null)
         {
-            $userEntity->setUserStatus($user->getStatus());
+            $userEntity->setStatus($user->getStatus());
         }
 
         try
@@ -234,7 +235,7 @@ class DoctrineDAO extends UserManagerDAO{
                     "fullname" => $userEntity->getFullname(),
                     "userid" => $userEntity->getUserId(),
                     "email" => $userEntity->getEmail(),
-                    "status" => $userEntity->getUserStatus(),
+                    "status" => $userEntity->getStatus(),
                     "date_created" => $userEntity->getDateCreated()->format('g:ia \o\n l jS F Y'),
                 );
             }

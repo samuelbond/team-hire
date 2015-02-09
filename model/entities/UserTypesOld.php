@@ -2,29 +2,28 @@
 
 namespace model\entities;
 
-use Doctrine\ORM\Mapping as ORM;
 
 /**
  * UserTypes
  *
- * @ORM\Table(name="user_types")
- * @ORM\Entity
+ * @Table(name="user_types", uniqueConstraints={@UniqueConstraint(name="user_role_UNIQUE", columns={"user_role"})})
+ * @Entity
  */
 class UserTypes
 {
     /**
      * @var integer
      *
-     * @ORM\Column(name="id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @Column(name="id", type="integer", nullable=false)
+     * @Id
+     * @GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="user_role", type="string", length=45, nullable=false)
+     * @Column(name="user_role", type="string", length=45, nullable=false)
      */
     private $userRole;
 
@@ -61,4 +60,14 @@ class UserTypes
     {
         return $this->userRole;
     }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+
 }

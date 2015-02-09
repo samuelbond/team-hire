@@ -64,10 +64,10 @@ class Users extends \model\entities\Users implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', '' . "\0" . 'model\\entities\\Users' . "\0" . 'userId', '' . "\0" . 'model\\entities\\Users' . "\0" . 'fullname', '' . "\0" . 'model\\entities\\Users' . "\0" . 'email', '' . "\0" . 'model\\entities\\Users' . "\0" . 'password', '' . "\0" . 'model\\entities\\Users' . "\0" . 'profile', '' . "\0" . 'model\\entities\\Users' . "\0" . 'profilePicture', '' . "\0" . 'model\\entities\\Users' . "\0" . 'userStatus', '' . "\0" . 'model\\entities\\Users' . "\0" . 'userType');
+            return array('__isInitialized__', '' . "\0" . 'model\\entities\\Users' . "\0" . 'userId', '' . "\0" . 'model\\entities\\Users' . "\0" . 'email', '' . "\0" . 'model\\entities\\Users' . "\0" . 'password', '' . "\0" . 'model\\entities\\Users' . "\0" . 'fullname', '' . "\0" . 'model\\entities\\Users' . "\0" . 'profile', '' . "\0" . 'model\\entities\\Users' . "\0" . 'profilePicture', '' . "\0" . 'model\\entities\\Users' . "\0" . 'status', '' . "\0" . 'model\\entities\\Users' . "\0" . 'dateCreated', '' . "\0" . 'model\\entities\\Users' . "\0" . 'userType');
         }
 
-        return array('__isInitialized__', '' . "\0" . 'model\\entities\\Users' . "\0" . 'userId', '' . "\0" . 'model\\entities\\Users' . "\0" . 'fullname', '' . "\0" . 'model\\entities\\Users' . "\0" . 'email', '' . "\0" . 'model\\entities\\Users' . "\0" . 'password', '' . "\0" . 'model\\entities\\Users' . "\0" . 'profile', '' . "\0" . 'model\\entities\\Users' . "\0" . 'profilePicture', '' . "\0" . 'model\\entities\\Users' . "\0" . 'userStatus', '' . "\0" . 'model\\entities\\Users' . "\0" . 'userType');
+        return array('__isInitialized__', '' . "\0" . 'model\\entities\\Users' . "\0" . 'userId', '' . "\0" . 'model\\entities\\Users' . "\0" . 'email', '' . "\0" . 'model\\entities\\Users' . "\0" . 'password', '' . "\0" . 'model\\entities\\Users' . "\0" . 'fullname', '' . "\0" . 'model\\entities\\Users' . "\0" . 'profile', '' . "\0" . 'model\\entities\\Users' . "\0" . 'profilePicture', '' . "\0" . 'model\\entities\\Users' . "\0" . 'status', '' . "\0" . 'model\\entities\\Users' . "\0" . 'dateCreated', '' . "\0" . 'model\\entities\\Users' . "\0" . 'userType');
     }
 
     /**
@@ -191,28 +191,6 @@ class Users extends \model\entities\Users implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function setFullname($fullname)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setFullname', array($fullname));
-
-        return parent::setFullname($fullname);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getFullname()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFullname', array());
-
-        return parent::getFullname();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setEmail($email)
     {
 
@@ -252,6 +230,28 @@ class Users extends \model\entities\Users implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPassword', array());
 
         return parent::getPassword();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setFullname($fullname)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setFullname', array($fullname));
+
+        return parent::setFullname($fullname);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFullname()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFullname', array());
+
+        return parent::getFullname();
     }
 
     /**
@@ -301,23 +301,45 @@ class Users extends \model\entities\Users implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function setUserStatus($userStatus)
+    public function setStatus($status)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUserStatus', array($userStatus));
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setStatus', array($status));
 
-        return parent::setUserStatus($userStatus);
+        return parent::setStatus($status);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getUserStatus()
+    public function getStatus()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUserStatus', array());
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getStatus', array());
 
-        return parent::getUserStatus();
+        return parent::getStatus();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setDateCreated($dateCreated)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDateCreated', array($dateCreated));
+
+        return parent::setDateCreated($dateCreated);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getDateCreated()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDateCreated', array());
+
+        return parent::getDateCreated();
     }
 
     /**
