@@ -119,19 +119,7 @@
                                 </table>
                             </div>
 
-                            <!-- Pagination -->
-                            <div class="shopping-pagination">
-                                <ul class="pagination" >
-                                    <li class="disabled"><a href="#">&laquo;</a></li>
-                                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">&raquo;</a></li>
-                                </ul>
-                            </div>
-                            <!-- Pagination end-->
+
 
                         </div>
                     </div>
@@ -147,11 +135,8 @@
                         <!-- Sidebar Menu -->
                         <ul class="account-nav">
                             <li><a href="profile">My Profile</a></li>
-                            <li><a href="manageprofile">Manage Profile</a></li>
                             <li><a href="manageusers">Manage Users</a></li>
-                            <li><a href="myblog">My Blog</a></li>
-                            <li><a href="publishblog">Publish Alerts</a></li>
-                            <li><a href="publishcomment">Blog Comments</a></li>
+                            <li><a href="cmsmanager">New CMS Entry</a></li>
                         </ul>
 
                     </div>

@@ -17,12 +17,12 @@ use component\usermanager\UserManagerInterface;
 class UserManagerVersion1 extends UserManager implements UserManagerInterface {
 
     private $actions = array(
-        "CREATE_BLOG" => array("WRITER", "ADMIN"),
+        "CREATE_BLOG" => array("USER", "ADMIN"),
         "CREATE_USER" => array("ADMIN"),
         "MANAGE_USER" => array("ADMIN"),
         "MANAGE_ALL_BLOG" => array("ADMIN"),
         "MANAGE_BLOG" => array("WRITER", "ADMIN"),
-        "MANAGE_PROFILE" => array("WRITER", "ADMIN"),
+        "MANAGE_PROFILE" => array("USER", "ADMIN"),
     );
 
 

@@ -76,8 +76,10 @@
 
                             <br />
                             <div class="block-heading-two">
-                                <h3><span>My Blog Entries</span></h3>
-                                <a href="newblogentry" ><span class="fa fa-plus color"></span> New Blog Entry</a>
+                                <h3><span>CMS Entries</span></h3>
+                                <a data-toggle="modal" data-target="#cmsMenuType" ><span class="fa fa-plus color"></span> New CMS Menu Type</a>
+                                <br />
+                                <a data-toggle="modal" data-target="#cmsMenu" ><span class="fa fa-plus color"></span> New CMS Menu</a>
                                 <br />
                                 <a href="#" data-toggle="modal" data-target="#myModal"><span class="fa fa-plus color"></span> New Blog Entry Category</a>
                             </div>
@@ -88,9 +90,9 @@
                                     <thead>
                                     <tr>
                                         <th>Title</th>
-                                        <th>Category</th>
+                                        <th>Link</th>
+                                        <th>Menu Type</th>
                                         <th>Status</th>
-                                        <th>Date Created</th>
                                         <th></th>
                                     </tr>
                                     </thead>
@@ -99,20 +101,20 @@
 
                                     <?php
 
-                                        foreach($myblog as $blog)
+                                        foreach($menus as $menu)
                                         {
                                             echo '
                                             <tr>
-                                                <td>'.$blog['title'].'</td>
-                                                <td>'.$blog['category'].'</td>
-                                                <td>'.(($blog['status'] == 0) ? "Not Published" : (($blog['status'] == 2) ? "Deleted" : "Published")).'</td>
-                                                <td>'.$blog['date_created'].'</td>
+                                                <td>'.$menu['title'].'</td>
+                                                <td>'.$menu['link'].'</td>
+                                                <td>'.$menu['type'].'</td>
+                                                <td>'.(($menu['status'] == 0) ? "Not Published" : (($menu['status'] == 2) ? "Deleted" : "Published")).'</td>
                                                 <td>
-                                                <a href="editblog?edit='.$blog['id'].'" data-toggle="tooltip" title="Edit"><span class="fa fa-edit color"></span></a>
+                                                <a href="editblog?edit='.$menu['id'].'" data-toggle="tooltip" title="Edit"><span class="fa fa-edit color"></span></a>
                                                 <br />
-                                                <a href="myblog?publish='.$blog['id'].'" data-toggle="tooltip" title="Publish"><span class="fa fa-print color"></span></a>
+                                                <a href="myblog?publish='.$menu['id'].'" data-toggle="tooltip" title="Publish"><span class="fa fa-print color"></span></a>
                                                 <br />
-                                                <a href="myblog?remove='.$blog['id'].'" data-toggle="tooltip" title="Delete"><span class="fa fa-remove color"></span></a>
+                                                <a href="myblog?remove='.$menu['id'].'" data-toggle="tooltip" title="Delete"><span class="fa fa-remove color"></span></a>
                                                 </td>
                                             </tr>';
                                         }
@@ -125,6 +127,7 @@
                             <div class="shopping-pagination">
                                 <ul class="pagination">
                                     <?php
+                                    /**
                                     for($k = 1; $k < $totalPages; $k++)
                                     {
                                         if($currentPage === $k)
@@ -138,6 +141,8 @@
                                         }
 
                                     }
+                                     *
+                                     */
                                     ?>
 
                                 </ul>
@@ -158,11 +163,8 @@
                         <!-- Sidebar Menu -->
                         <ul class="account-nav">
                             <li><a href="profile">My Profile</a></li>
-                            <li><a href="manageprofile">Manage Profile</a></li>
                             <li><a href="manageusers">Manage Users</a></li>
-                            <li><a href="myblog">My Blog</a></li>
-                            <li><a href="publishblog">Publish Alerts</a></li>
-                            <li><a href="publishcomment">Blog Comments</a></li>
+                            <li><a href="cmsmanager">New CMS Entry</a></li>
                         </ul>
 
                     </div>
@@ -207,5 +209,92 @@
         </div>
     </div>
 </div>
+
+
+<!-- CMS Menu Type -->
+<div class="modal fade" id="cmsMenuType" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">New CMS Menu Type</h4>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="cmsmanager" >
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Menu Type</label>
+                            <input type="text" name="new_menu_type" class="form-control" id="exampleInputEmail1" placeholder="New Menu Type e.g home">
+                        </div>
+
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Create New Menu Type</button>
+                </form>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- CMS Menu -->
+<div class="modal fade" id="cmsMenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">New CMS Menu</h4>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="cmsmanager" >
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Menu Title</label>
+                            <input type="text" name="new_menu" class="form-control" id="exampleInputEmail1" placeholder="Menu title e.g Home">
+                        </div>
+
+                    </div>
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Menu Order</label>
+                            <input type="text" name="menu_order" class="form-control" id="exampleInputEmail1" placeholder="1">
+                        </div>
+
+                    </div>
+
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Menu Link</label>
+                            <input type="text" name="menu_link" class="form-control" id="exampleInputEmail1" placeholder="Menu Link e.g /home">
+                        </div>
+
+                    </div>
+
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Menu Type</label>
+                            <select name="m_type" class="form-control">
+                                <?php foreach($menuTypes as $mType)
+                                {
+                                    echo '<option value="'.$mType['id'].'">'.$mType['title'].'</option>';
+                                } ?>
+                            </select>
+                        </div>
+
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Create New Menu</button>
+                </form>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 

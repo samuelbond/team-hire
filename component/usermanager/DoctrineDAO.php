@@ -143,7 +143,7 @@ class DoctrineDAO extends UserManagerDAO{
                 $user->setUserId($obj->getUserId());
                 $user->setUserType($obj->getUserType()->getUserRole());
                 $user->setPassword($obj->getPassword());
-                $user->setStatus($obj->getUserStatus());
+                $user->setStatus($obj->getStatus());
                 $this->currentEntity = $obj;
             }
 

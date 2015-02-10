@@ -98,4 +98,10 @@ abstract class CmsDAO extends AbstractDAO{
      */
     public abstract function fetchAllMenuTypes();
 
+    /**
+     * Fetches all page blocks
+     * @return array
+     */
+    public abstract function fetchAllPageBlocks();
+
 } 

@@ -69,6 +69,24 @@ class DoctrineDAO extends CmsDAO{
     }
 
     /**
+     * Fetches all page blocks
+     * @return array
+     */
+    public function fetchAllPageBlocks()
+    {
+        try
+        {
+            $blocks = $this->entityManager->getRepository("model\\entities\\CmsPageBlocks")->findAll();
+
+            return $this->parsePageBlocks($blocks);
+        }catch (\Exception $ex)
+        {
+            return array();
+        }
+    }
+
+
+    /**
      * Fetches all menus
      * @return array
      */
@@ -417,7 +435,7 @@ class DoctrineDAO extends CmsDAO{
             {
                 $output[] = array(
                     "id" => $menu->getId(),
-                    "title" => $menus->getMenuType(),
+                    "title" => $menu->getMenuType(),
                 );
             }
         }

@@ -33,7 +33,7 @@ class Cms extends AbstractComponent{
     /**
      * Returns an instance of the component
      * @param AbstractComponentInjector $componentInjector
-     * @return null|$this\CmsV1
+     * @return null|$this|\component\cms\version\v1\CmsV1
      */
     public function getInstance(AbstractComponentInjector $componentInjector)
     {
