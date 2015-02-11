@@ -9,6 +9,7 @@
 namespace component\cms;
 
 
+use application\Template;
 use Doctrine\ORM\EntityManager;
 use model\entities\CmsMenus;
 use model\entities\CmsMenuType;
@@ -51,7 +52,7 @@ class DoctrineDAO extends CmsDAO{
         try
         {
             $block = $this->entityManager->getRepository("model\\entities\\CmsPageBlocks")->findBy(array("id" => $pageBlock->getId()));
-            if(is_array($block))
+            if(is_array($block) && sizeof($block) > 0)
             {
                 $this->currentEntity = $block[0];
             }
@@ -113,7 +114,7 @@ class DoctrineDAO extends CmsDAO{
         try
         {
             $menus = $this->entityManager->getRepository("model\\entities\\CmsMenus")->findBy(array("id" => $menu->getId()));
-            if(is_array($menus))
+            if(is_array($menus) && sizeof($menus) > 0)
             {
                 $this->currentEntity = $menus[0];
             }
@@ -141,7 +142,7 @@ class DoctrineDAO extends CmsDAO{
         {
             $pages = $this->entityManager->getRepository("model\\entities\\CmsPages")->findBy(array("id" => $page->getId()));
 
-            if(is_array($pages))
+            if(is_array($pages) && sizeof($pages) > 0)
             {
                 $this->currentEntity = $pages[0];
             }
@@ -170,7 +171,7 @@ class DoctrineDAO extends CmsDAO{
         {
             $menus = $this->entityManager->getRepository("model\\entities\\CmsMenuType")->findBy(array("id" => $menuType->getId()));
 
-            if(is_array($menus))
+            if(is_array($menus) && sizeof($menus) > 0)
             {
                 $this->currentEntity = $menus[0];
             }
@@ -309,6 +310,151 @@ class DoctrineDAO extends CmsDAO{
             return false;
         }
     }
+
+    /**
+     * Update a given menu
+     * @param Menu $menu
+     * @return bool
+     */
+    public function updateMenu(Menu $menu)
+    {
+        try
+        {
+            $this->fetchMenu($menu);
+            $menuEntity = $this->currentEntity;
+
+            if(!is_null($menu->getTitle()))
+            {
+                $menuEntity->setMenuTitle($menu->getTitle());
+            }
+
+            if(!is_null($menu->getLink()))
+            {
+                $menuEntity->setMenuLink($menu->getLink());
+            }
+
+            if(!is_null($menu->getOrder()))
+            {
+                $menuEntity->setMenuOrder($menu->getOrder());
+            }
+
+            if(!is_null($menu->getStatus()))
+            {
+                $menuEntity->setStatus($menu->getStatus());
+            }
+
+
+            $this->entityManager->merge($menuEntity);
+            $this->entityManager->flush();
+            return true;
+        }
+        catch(\Exception $ex)
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Update a given menu type
+     * @param MenuType $menuType
+     * @return bool
+     */
+    public function updateMenuType(MenuType $menuType)
+    {
+        try
+        {
+            $this->fetchMenuType($menuType);
+            $menuTypeEntity = $this->currentEntity;
+
+            if(!is_null($menuType->getType()))
+            {
+                $menuTypeEntity->setMenuType($menuType->getType());
+            }
+
+            $this->entityManager->merge($menuTypeEntity);
+            $this->entityManager->flush();
+            return true;
+        }
+        catch(\Exception $ex)
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Update a given page
+     * @param Page $page
+     * @return bool
+     */
+    public function updatePage(Page $page)
+    {
+        try
+        {
+            $this->fetchPage($page);
+            $pageEntity = $this->currentEntity;
+
+            if(!is_null($page->getTitle()))
+            {
+                $pageEntity->setPageTitle($page->getTitle());
+            }
+
+            if(!is_null($page->getContent()))
+            {
+                $pageEntity->setPageContent($page->getContent());
+            }
+
+            if(!is_null($page->getStatus()))
+            {
+                $pageEntity->setStatus($page->getStatus());
+            }
+
+            $this->entityManager->merge($pageEntity);
+            $this->entityManager->flush();
+            return true;
+        }
+        catch(\Exception $ex)
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Update a given page block
+     * @param PageBlock $block
+     * @return bool
+     */
+    public function updatePageBlock(PageBlock $block)
+    {
+        try
+        {
+            $this->fetchPageBlocks($block);
+            $pageBlockEntity = $this->currentEntity;
+
+            if(!is_null($block->getTitle()))
+            {
+                $pageBlockEntity->setBlockTitle($block->getTitle());
+            }
+
+            if(!is_null($block->getContent()))
+            {
+                $pageBlockEntity->setBlockContent($block->getContent());
+            }
+
+            if(!is_null($block->getStatus()))
+            {
+                $pageBlockEntity->setStatus($block->getStatus());
+            }
+
+            $this->entityManager->merge($pageBlockEntity);
+            $this->entityManager->flush();
+            return true;
+        }
+        catch(\Exception $ex)
+        {
+            return false;
+        }
+    }
+
 
     /**
      * @param mixed $entityManager

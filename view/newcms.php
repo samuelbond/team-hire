@@ -81,7 +81,9 @@
                                 <br />
                                 <a data-toggle="modal" data-target="#cmsMenu" ><span class="fa fa-plus color"></span> New CMS Menu</a>
                                 <br />
-                                <a href="#" data-toggle="modal" data-target="#myModal"><span class="fa fa-plus color"></span> New Blog Entry Category</a>
+                                <a data-toggle="modal" data-target="#cmsPage" ><span class="fa fa-plus color"></span> New CMS Page</a>
+                                <br />
+                                <a href="#" data-toggle="modal" data-target="#cmsPageBlock"><span class="fa fa-plus color"></span> New CMS Page Block</a>
                             </div>
 
                             <div class="rptable table-responsive">
@@ -110,7 +112,7 @@
                                                 <td>'.$menu['type'].'</td>
                                                 <td>'.(($menu['status'] == 0) ? "Not Published" : (($menu['status'] == 2) ? "Deleted" : "Published")).'</td>
                                                 <td>
-                                                <a href="editblog?edit='.$menu['id'].'" data-toggle="tooltip" title="Edit"><span class="fa fa-edit color"></span></a>
+                                                <a href="editmenu?edit_menu='.$menu['id'].'" data-toggle="tooltip" title="Edit"><span class="fa fa-edit color"></span></a>
                                                 <br />
                                                 <a href="myblog?publish='.$menu['id'].'" data-toggle="tooltip" title="Publish"><span class="fa fa-print color"></span></a>
                                                 <br />
@@ -180,35 +182,6 @@
 </div>
 </div>
 <!-- Main content ends -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">New Blog Category</h4>
-            </div>
-            <div class="modal-body">
-                <form method="post" action="myblog" >
-                    <div class="rptable table-responsive">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Blog Entry Category</label>
-                            <input type="text" name="new_category" class="form-control" id="exampleInputEmail1" placeholder="Blog Entry Category e.g Web Development">
-                        </div>
-
-                    </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Create New Category</button>
-                </form>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <!-- CMS Menu Type -->
@@ -297,4 +270,103 @@
 </div>
 
 
+
+<!-- CMS Page -->
+<div class="modal fade" id="cmsPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">New CMS Page</h4>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="cmsmanager" >
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Page Title</label>
+                            <input type="text" name="new_menu" class="form-control" id="exampleInputEmail1" placeholder="Menu title e.g Home">
+                        </div>
+
+                    </div>
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Page Content</label>
+                            <textarea class="form-control" name="" id=""></textarea>
+                        </div>
+
+                    </div>
+
+
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Assign Page to Menu</label>
+                            <select name="m_type" class="form-control">
+                                <?php foreach($menus as $m)
+                                {
+                                    echo '<option value="'.$m['id'].'">'.$m['title'].'</option>';
+                                } ?>
+                            </select>
+                        </div>
+
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Create New Page</button>
+                </form>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- CMS Page Block -->
+<div class="modal fade" id="cmsPageBlock" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">New CMS Page Block</h4>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="cmsmanager" >
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Page Block Title</label>
+                            <input type="text" name="new_menu" class="form-control" id="exampleInputEmail1" placeholder="Menu title e.g Home">
+                        </div>
+
+                    </div>
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Page Block Content</label>
+                            <textarea class="form-control" name="" id=""></textarea>
+                        </div>
+
+                    </div>
+
+
+                    <div class="rptable table-responsive">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Assign Page Block to Page</label>
+                            <select name="m_type" class="form-control">
+                                <?php foreach($menus as $m)
+                                {
+                                    echo '<option value="'.$m['id'].'">'.$m['title'].'</option>';
+                                } ?>
+                            </select>
+                        </div>
+
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Create New Page Block</button>
+                </form>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 

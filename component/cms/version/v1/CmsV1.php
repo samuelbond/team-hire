@@ -52,7 +52,24 @@ class CmsV1 extends Cms implements CMSInterface{
      */
     public function modifyCMSItem($object)
     {
-        // TODO: Implement modifyCMSItem() method.
+        if($object instanceof MenuType)
+        {
+            return $this->dao->updateMenuType($object);
+        }
+        elseif($object instanceof Menu)
+        {
+            return $this->dao->updateMenu($object);
+        }
+        elseif($object instanceof Page)
+        {
+            return $this->dao->updatePage($object);
+        }
+        elseif($object instanceof PageBlock)
+        {
+            return $this->dao->updatePageBlock($object);
+        }
+
+        return false;
     }
 
     /**
@@ -89,7 +106,24 @@ class CmsV1 extends Cms implements CMSInterface{
      */
     public function getCMSItem($cmsItemObject)
     {
-        // TODO: Implement getCMSItem() method.
+        if($cmsItemObject instanceof MenuType)
+        {
+            return $this->dao->fetchMenuType($cmsItemObject);
+        }
+        elseif($cmsItemObject instanceof Menu)
+        {
+            return $this->dao->fetchMenu($cmsItemObject);
+        }
+        elseif($cmsItemObject instanceof Page)
+        {
+            return $this->dao->fetchPage($cmsItemObject);
+        }
+        elseif($cmsItemObject instanceof PageBlock)
+        {
+            return $this->dao->fetchPageBlocks($cmsItemObject);
+        }
+
+        return array();
     }
 
 

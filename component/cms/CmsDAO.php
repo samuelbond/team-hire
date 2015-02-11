@@ -104,4 +104,32 @@ abstract class CmsDAO extends AbstractDAO{
      */
     public abstract function fetchAllPageBlocks();
 
+    /**
+     * Update a given menu
+     * @param Menu $menu
+     * @return bool
+     */
+    public abstract function updateMenu(Menu $menu);
+
+    /**
+     * Update a given menu type
+     * @param MenuType $menuType
+     * @return bool
+     */
+    public abstract function updateMenuType(MenuType $menuType);
+
+    /**
+     * Update a given page
+     * @param Page $page
+     * @return bool
+     */
+    public abstract function updatePage(Page $page);
+
+    /**
+     * Update a given page block
+     * @param PageBlock $block
+     * @return bool
+     */
+    public abstract function updatePageBlock(PageBlock $block);
+
 } 
