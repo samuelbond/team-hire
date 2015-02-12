@@ -376,7 +376,7 @@
             <!-- Image Box #3 Item -->
             <div class="img-box-3-item">
                 <div class="img-box-3-icon bg-red">
-                    <a href="#"><img src="view/img/flat-icons/10.png" alt="" class="img-responsive" /></a>
+                    <a href="#"><img src="view/img/flat-icons/6.png" alt="" class="img-responsive" /></a>
                 </div>
                 <h4><a href="#">Consequatr</a></h4>
                 <div class="bor bg-red"></div>
@@ -387,7 +387,7 @@
             <!-- Image Box #3 Item -->
             <div class="img-box-3-item">
                 <div class="img-box-3-icon bg-lblue">
-                    <a href="#"><img src="view/img/flat-icons/3.png" alt="" class="img-responsive" /></a>
+                    <a href="#"><img src="view/img/flat-icons/18.png" alt="" class="img-responsive" /></a>
                 </div>
                 <h4><a href="#">Doloribues</a></h4>
                 <div class="bor bg-lblue"></div>

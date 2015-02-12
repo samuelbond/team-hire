@@ -8,7 +8,7 @@
                 <!-- Foot Item -->
                 <div class="foot-item">
                     <!-- Heading -->
-                    <h5 class="bold"><i class="fa fa-user"></i>&nbsp;&nbsp;Team Hire Blog</h5>
+                    <h5 class="bold"><i class="fa fa-user"></i>&nbsp;&nbsp;Team Hire</h5>
                     <p>Welcome to the Team Hire Blog, we share our thoughts, opinions and experience on various Information Technology topics</p>
                     <div class="brand-bg">
                         <!-- Social Media Icons -->
@@ -42,12 +42,14 @@
                     <!-- Foot Item Content -->
                     <div class="foot-item-content address">
                         <!-- Heading -->
-                        <h6 class="bold"><i class="fa fa-home"></i>&nbsp;&nbsp;Team Hire</h6>
+                        <h6 class="bold"><i class="fa fa-home"></i>&nbsp;&nbsp;Team Hire - Plati Tech Limited</h6>
                         <!-- Paragraph -->
-                        <!--
+
                         <p class="add">
-                            London, United Kingdom</p>
-                            -->
+                            BEC, 50 Cambridge Road<br />
+                            Barking, London<br />
+                            United Kingdom</p>
+
                         <p class="tel"> <i class="fa fa-phone"></i> Tel : + (07) - 818 210052<br />
                             <i class="fa fa-envelope"></i>  Mail : <a href="#">info@teamhire.co.uk</a><br />
                     </div>
@@ -68,10 +70,10 @@
     <div class="container">
         <!-- Footer Content -->
         <!-- Paragraph -->
-        <p class="pull-left">Copyright &copy; 2014 - <a href="#">Team Hire</a></p>
+        <p class="pull-left">Copyright &copy; 2014 - <a href="http://www.teamhire.co.uk">Team Hire</a></p>
         <ul class="list-inline pull-right">
             <!-- List -->
-            <li><a href="signin">Login</a><li>
+
         </ul>
         <!-- Clearfix -->
         <div class="clearfix"></div>
