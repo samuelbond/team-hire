@@ -3,7 +3,7 @@
  * @var \component\usermanager\User $profile
  */
 ?>
-
+<script src="view/ckeditor/ckeditor.js"></script>
 <!-- Main content starts -->
 
 <div class="main-block">
@@ -114,9 +114,9 @@
                                                 <td>
                                                 <a href="editmenu?edit_menu='.$menu['id'].'" data-toggle="tooltip" title="Edit"><span class="fa fa-edit color"></span></a>
                                                 <br />
-                                                <a href="myblog?publish='.$menu['id'].'" data-toggle="tooltip" title="Publish"><span class="fa fa-print color"></span></a>
+                                                <a href="editmenu?menu_publish='.$menu['id'].'&status=1" data-toggle="tooltip" title="Publish"><span class="fa fa-print color"></span></a>
                                                 <br />
-                                                <a href="myblog?remove='.$menu['id'].'" data-toggle="tooltip" title="Delete"><span class="fa fa-remove color"></span></a>
+                                                <a href="editmenu?menu_publish='.$menu['id'].'&status=2" data-toggle="tooltip" title="Delete"><span class="fa fa-remove color"></span></a>
                                                 </td>
                                             </tr>';
                                         }
@@ -167,6 +167,8 @@
                             <li><a href="profile">My Profile</a></li>
                             <li><a href="manageusers">Manage Users</a></li>
                             <li><a href="cmsmanager">New CMS Entry</a></li>
+                            <li><a href="cmspage">CMS Page</a></li>
+                            <li><a href="cmspageblock">CMS Page Blocks</a></li>
                         </ul>
 
                     </div>
@@ -284,14 +286,14 @@
                     <div class="rptable table-responsive">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Page Title</label>
-                            <input type="text" name="new_menu" class="form-control" id="exampleInputEmail1" placeholder="Menu title e.g Home">
+                            <input type="text" name="new_page" class="form-control" id="exampleInputEmail1" placeholder="Menu title e.g Home">
                         </div>
 
                     </div>
                     <div class="rptable table-responsive">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Page Content</label>
-                            <textarea class="form-control" name="" id=""></textarea>
+                            <textarea class="form-control" name="new_page_content" id="content"></textarea>
                         </div>
 
                     </div>
@@ -300,7 +302,7 @@
                     <div class="rptable table-responsive">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Assign Page to Menu</label>
-                            <select name="m_type" class="form-control">
+                            <select name="p_menu" class="form-control">
                                 <?php foreach($menus as $m)
                                 {
                                     echo '<option value="'.$m['id'].'">'.$m['title'].'</option>';
@@ -334,14 +336,14 @@
                     <div class="rptable table-responsive">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Page Block Title</label>
-                            <input type="text" name="new_menu" class="form-control" id="exampleInputEmail1" placeholder="Menu title e.g Home">
+                            <input type="text" name="new_page_block" class="form-control" id="exampleInputEmail1" placeholder="Menu title e.g Home">
                         </div>
 
                     </div>
                     <div class="rptable table-responsive">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Page Block Content</label>
-                            <textarea class="form-control" name="" id=""></textarea>
+                            <textarea class="form-control" name="new_page_block_content" id="content2"></textarea>
                         </div>
 
                     </div>
@@ -350,10 +352,10 @@
                     <div class="rptable table-responsive">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Assign Page Block to Page</label>
-                            <select name="m_type" class="form-control">
-                                <?php foreach($menus as $m)
+                            <select name="pb_page" class="form-control">
+                                <?php foreach($pages as $p)
                                 {
-                                    echo '<option value="'.$m['id'].'">'.$m['title'].'</option>';
+                                    echo '<option value="'.$p['id'].'">'.$p['title'].'</option>';
                                 } ?>
                             </select>
                         </div>
@@ -370,3 +372,20 @@
     </div>
 </div>
 
+<script>
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace( 'content', {
+        extraPlugins: 'codesnippet',
+        codeSnippet_theme: 'monokai_sublime'
+    });
+</script>
+
+<script>
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace( 'content2', {
+        extraPlugins: 'codesnippet',
+        codeSnippet_theme: 'monokai_sublime'
+    });
+</script>

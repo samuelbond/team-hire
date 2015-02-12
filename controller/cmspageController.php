@@ -2,30 +2,29 @@
 /**
  * Created by PhpStorm.
  * User: samuel
- * Date: 10/02/15
- * Time: 16:18
+ * Date: 12/02/15
+ * Time: 11:47
  */
 
 namespace controller;
 
 
 use application\BaseController;
+use application\Paginator;
 use component\cms\Cms;
 use component\cms\CmsInjector;
-use component\cms\Menu;
-use component\cms\MenuType;
 use component\cms\Page;
-use component\cms\PageBlock;
 use component\usermanager\User;
 use component\usermanager\UserManager;
 use component\usermanager\UserManagerInjector;
 
-class cmsmanagerController extends BaseController{
+class cmspageController extends BaseController{
 
+    use Paginator;
     public function index()
     {
         $currentAction = "MANAGE_USER";
-        $this->setPageTitle("CMS Manager");
+        $this->setPageTitle("CMS Pages");
         $injector = new UserManagerInjector();
         $userManager = (new UserManager())->getInstance($injector);
 
@@ -92,21 +91,17 @@ class cmsmanagerController extends BaseController{
                 }
             }
 
-            $cmsItem = new MenuType();
-            $types = $cms->getAllCMSItem($cmsItem);
-            $this->registry->template->menuTypes = $types;
-            $cmsItem = new Menu();
-            $menusA = $cms->getAllCMSItem($cmsItem);
-            $this->registry->template->menus = $menusA;
             $pages = $cms->getAllCMSItem(new Page());
-            $this->registry->template->pages = $pages;
+            $currentPage = ((isset($_GET['page'])) ? $_GET['page'] : 1);
+            $this->registry->template->pages = $this->pagination($pages, $currentPage);
+            $this->registry->template->totalPages = $this->getNumberOfTotalPages();
+            $this->registry->template->currentPage = $currentPage;
             $this->registry->template->profile = $profile;
-            $this->registry->template->loadView("newcms");
+            $this->registry->template->loadView("cms_pages");
             return true;
         }
 
         header("Location: signin?profile=false");
         return true;
     }
-
 } 

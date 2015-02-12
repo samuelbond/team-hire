@@ -76,19 +76,17 @@
 
                             <br />
                             <div class="block-heading-two">
-                                <h3><span>All Publish Request</span></h3>
-                            </div>
+                                <h3><span>All Pages</span></h3>
+                                 </div>
 
                             <div class="rptable table-responsive">
                                 <table class="table table-bordered">
                                     <!-- Table Header -->
                                     <thead>
                                     <tr>
-                                        <th>Blog Entry Title</th>
-                                        <th>Category</th>
-                                        <th>Commenter Name</th>
-                                        <th>Commenter Email</th>
-                                        <th>Comment Status</th>
+                                        <th>Title</th>
+                                        <th>Menu</th>
+                                        <th>Status</th>
                                         <th>Date Created</th>
                                         <th></th>
                                     </tr>
@@ -98,20 +96,20 @@
 
                                     <?php
 
-                                    foreach($alerts as $alert)
+                                    foreach($pages as $page)
                                     {
                                         echo '
                                             <tr>
-                                                <td><a href="publishcomment?read_comment='.$alert['id'].'" target="_blank">'.$alert['title'].'</a></td>
-                                                <td>'.$alert['category'].'</td>
-                                                <td>'.$alert['commenter'].'</td>
-                                                <td>'.$alert['commenter_email'].'</td>
-                                                <td>'.(($alert['status'] == 0) ? "Not Published" : (($alert['status'] == 2) ? "Deleted" : "Published")).'</td>
-                                                <td>'.$alert['date_created'].'</td>
+                                                <td><a href="reader?entry=" target="_blank">'.$page['title'].'</a></td>
+                                                <td>'.$page['menu'].'</td>
+                                                <td>'.(($page['status'] == 0) ? "Not Published" : (($page['status'] == 2) ? "Deleted" : "Published")).'</td>
+                                                <td>'.$page['date_created'].'</td>
                                                 <td>
-                                                <a href="publishcomment?publish='.$alert['id'].'" data-toggle="tooltip" title="Publish"><span class="fa fa-print color"></span></a>
+                                                <a href="editpage?edit_page='.$page['id'].'" data-toggle="tooltip" title="Edit"><span class="fa fa-edit color"></span></a>
                                                 <br />
-                                                <a href="publishcomment?remove='.$alert['id'].'" data-toggle="tooltip" title="Delete"><span class="fa fa-remove color"></span></a>
+                                                <a href="editpage?page_publish='.$page['id'].'&status=1" data-toggle="tooltip" title="Publish"><span class="fa fa-print color"></span></a>
+                                                <br />
+                                                <a href="editpage?page_publish='.$page['id'].'&status=2" data-toggle="tooltip" title="Delete"><span class="fa fa-remove color"></span></a>
                                                 </td>
                                             </tr>';
                                     }
@@ -157,11 +155,10 @@
                         <!-- Sidebar Menu -->
                         <ul class="account-nav">
                             <li><a href="profile">My Profile</a></li>
-                            <li><a href="manageprofile">Manage Profile</a></li>
                             <li><a href="manageusers">Manage Users</a></li>
-                            <li><a href="myblog">My Blog</a></li>
-                            <li><a href="publishblog">Publish Alerts</a></li>
-                            <li><a href="publishcomment">Blog Comments</a></li>
+                            <li><a href="cmsmanager">New CMS Entry</a></li>
+                            <li><a href="cmspage">CMS Page</a></li>
+                            <li><a href="cmspageblock">CMS Page Blocks</a></li>
                         </ul>
 
                     </div>
@@ -177,4 +174,5 @@
 </div>
 </div>
 <!-- Main content ends -->
+
 

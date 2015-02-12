@@ -221,7 +221,7 @@ class DoctrineDAO extends CmsDAO{
             $obj->setPageTitle($page->getTitle());
             $obj->setStatus(0);
             $mt = new Menu();
-            $mt->setId($page->getId());
+            $mt->setId($page->getMenu());
             $this->fetchMenu($mt);
             $obj->setCmsMenu($this->currentEntity);
             $obj->setPageContent($page->getContent());

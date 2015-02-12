@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: samuel
- * Date: 11/02/15
- * Time: 09:42
+ * Date: 12/02/15
+ * Time: 14:27
  */
 
 namespace controller;
@@ -12,12 +12,12 @@ namespace controller;
 use application\BaseController;
 use component\cms\Cms;
 use component\cms\CmsInjector;
-use component\cms\Menu;
+use component\cms\PageBlock;
 use component\usermanager\User;
 use component\usermanager\UserManager;
 use component\usermanager\UserManagerInjector;
 
-class editmenuController extends BaseController{
+class editpageblockController extends BaseController{
 
     public function index()
     {
@@ -47,50 +47,49 @@ class editmenuController extends BaseController{
             {
                 $cmsItem = null;
 
-                if(isset($_POST['menu_title']))
+                if(isset($_POST['page_block_id']))
                 {
-                    $cmsItem = new Menu();
-                    $cmsItem->setId($_POST['menu_id']);
-                    $cmsItem->setTitle(trim($_POST['menu_title']));
-                    $cmsItem->setLink(trim($_POST['menu_link']));
-                    $cmsItem->setOrder(trim($_POST['menu_order']));
+                    $cmsItem = new PageBlock();
+                    $cmsItem->setId($_POST['page_block_id']);
+                    $cmsItem->setTitle(trim($_POST['page_block_title']));
+                    $cmsItem->setContent(trim($_POST['page_block_content']));
                 }
 
                 if($cms->modifyCMSItem($cmsItem))
                 {
-                    header("Location: cmsmanager");
+                    header("Location: cmspageblock");
                     return true;
                 }
                 else
                 {
-                    $this->registry->template->error = "Failed to create new CMS Item";
+                    $this->registry->template->error = "Failed to modify page";
                 }
             }
 
-            if(isset($_GET['menu_publish']))
+            if(isset($_GET['page_block_publish']))
             {
-                $cmsItem = new Menu();
-                $cmsItem->setId(trim($_GET['menu_publish']));
+                $cmsItem = new PageBlock();
+                $cmsItem->setId(trim($_GET['page_block_publish']));
                 $cmsItem->setStatus(intval($_GET['status']));
 
                 if($cms->modifyCMSItem($cmsItem))
                 {
-                    header("Location: cmsmanager");
+                    header("Location: cmspageblock");
                     return true;
                 }
                 else
                 {
-                    $this->registry->template->error = "Failed to create new CMS Item";
+                    $this->registry->template->error = "Failed to publish page";
                 }
             }
 
-            $id = ((isset($_POST['menu_id'])) ? $_POST['menu_id'] : $_GET['edit_menu']);
-            $cmsItem = new Menu();
+            $id = ((isset($_POST['edit_page_block'])) ? $_POST['edit_page_block'] : $_GET['edit_page_block']);
+            $cmsItem = new PageBlock();
             $cmsItem->setId($id);
-            $menusA = $cms->getCMSItem($cmsItem);
-            $this->registry->template->menus = $menusA;
+            $pg = $cms->getCMSItem($cmsItem);
+            $this->registry->template->page = $pg;
             $this->registry->template->profile = $profile;
-            $this->registry->template->loadView("edit_menu");
+            $this->registry->template->loadView("edit_page_block");
             return true;
         }
 

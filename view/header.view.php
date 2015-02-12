@@ -101,10 +101,10 @@
     <!-- Container -->
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 pull-left">
                 <!-- Logo section -->
                 <div class="logo">
-                    <h1><a href="index"><i class="fa fa-laptop"></i> Team Hire</a></h1>
+                   <a href="index"><img src="view/img/teamhirlogo.png"></a>
                 </div>
             </div>
             <div class="col-md-9">
