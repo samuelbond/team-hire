@@ -138,7 +138,8 @@ class User {
         $options = [
             'cost' => 12,
         ];
-        $this->password = password_hash($this->password, PASSWORD_BCRYPT, $options);
+        //$this->password = password_hash($this->password, PASSWORD_BCRYPT, $options);
+        $this->password = hash('sha512', $this->password);
     }
 
     public function useDefaultProfilePicture()
