@@ -443,7 +443,7 @@
     <div class="col-md-4 col-sm-6">
 
         <h5>Why Choose Us?</h5>
-        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+        <p>We are very flexible with our processes and can scale up or down as required by your project</p>
         <!-- Accordion starts -->
         <div class="panel-group accordion-alt3" id="accordion-alt3">
             <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
@@ -452,14 +452,15 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
-                            <i class="fa fa-angle-right"></i> Minimal Collapsible Group Item #1
+                            <i class="fa fa-angle-right"></i> We are Experts
                         </a>
                     </h4>
                 </div>
                 <div id="collapseOne-alt3" class="panel-collapse collapse">
                     <!-- Panel body -->
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                       We are experts in what we do, we are all academically and professionally sound in our fields. You can rely on us to provide
+                        you the professional service that your project requires
                     </div>
                 </div>
             </div>
@@ -467,13 +468,13 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
-                            <i class="fa fa-angle-right"></i> Minimal Collapsible Group Item #2
+                            <i class="fa fa-angle-right"></i> We are cost effective
                         </a>
                     </h4>
                 </div>
                 <div id="collapseTwo-alt3" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                       We will provide your project a team of experienced software developers and project managers at a very reasonable cost in contrast to the vast pool of expertise and skill set of the team memebers
                     </div>
                 </div>
             </div>
@@ -481,13 +482,13 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-                            <i class="fa fa-angle-right"></i> Minimal Collapsible Group Item #3
+                            <i class="fa fa-angle-right"></i> You can start small or Big
                         </a>
                     </h4>
                 </div>
                 <div id="collapseThree-alt3" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        Your project can start with as little as 1 person in the team and then scale up to more team members as required by your project or you can start Big and scale it down as requirements are been covered
                     </div>
                 </div>
             </div>
@@ -495,13 +496,13 @@
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-                            <i class="fa fa-angle-right"></i> Minimal Collapsible Group Item #4
+                            <i class="fa fa-angle-right"></i> Done but not forgotten
                         </a>
                     </h4>
                 </div>
                 <div id="collapseFour-alt3" class="panel-collapse collapse">
                     <div class="panel-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        Before we finish your project our project managers will come up with a custom maintenance strategy that suits your project, so even if your project scales up or down your maintenance strategy scales with you.
                     </div>
                 </div>
             </div>
@@ -511,64 +512,35 @@
     </div>
 
     <div class="col-md-4 col-sm-6">
-        <h5>Our Expertise</h5>
-        <p>Lorem ipsum dolor consectetursit amet, consectetur adipiscing elit consectetur euismod ed  euismod  adipiscing elit sapien. Donec eu feugiat enim,  tempus arcu. </p>
-        <h6>Web Designing</h6>
+        <h5>What to Expect</h5>
+        <p>It's very important to us that you know what to expect from us from the very beginning of your project till the end</p>
+        <h6>Clear Communication and Reliable Support</h6>
         <div class="progress pb-sm">
             <!-- White color (progress-bar-white) -->
-            <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                <span class="sr-only">40% Complete (success)</span>
+            <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">100% Complete (success)</span>
             </div>
         </div>
-        <h6>Doing Party</h6>
+        <h6>Team of Skilled Developers</h6>
         <div class="progress pb-sm">
-            <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                <span class="sr-only">40% Complete (success)</span>
+            <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">100% Complete (success)</span>
             </div>
         </div>
-        <h6>Money Making</h6>
+        <h6>Quality Service</h6>
         <div class="progress pb-sm">
-            <div class="progress-bar progress-bar-lblue" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                <span class="sr-only">40% Complete (success)</span>
+            <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">100% Complete (success)</span>
             </div>
         </div>
     </div>
 
-</div>
-
-<br />
-
-<div class="cta-one">
-    <!-- CTA One Content -->
-    <div class="cta-one-content">
-        <div class="row">
-            <div class="col-md-5">
-                <!-- CTA One Item -->
-                <div class="cta-one-item">
-                    <h4>Actual Teachings Demoraliest Indignation</h4>
-                    <p>Righteous indignation and dislike men who are so beguiled and indignation and dislike men who demoralized with righteous.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="cta-one-item">
-                    <ul class="list-2">
-                        <li>Deleniti atque corrupti dislike option.</li>
-                        <li>Eligendi optio molestias dislike imper.</li>
-                        <li>Itaque earum rerum tenetur dislike molstn.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <a href="#" class="btn btn-color btn-lg"><i class="fa fa-download"></i>&nbsp; Download Themes</a>
-            </div>
-        </div>
-    </div>
 </div>
 
 <br />
 
 <div class="block-heading-two">
-    <h3><span>Recent Works</span></h3>
+    <h3><span>Recent and Ongoing Projects</span></h3>
 </div>
 
 <div class="img-box-4 text-center">

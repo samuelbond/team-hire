@@ -8,7 +8,7 @@
     <meta name="description" content="Your description">
     <meta name="keywords" content="Your,Keywords">
     <meta name="author" content="ResponsiveWebInc">
-    <base href="http://localhost/team-hire/"/>
+    <base href="<?php echo $page_base_patH; ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Styles -->

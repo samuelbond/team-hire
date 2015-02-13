@@ -30,6 +30,16 @@ Abstract class BaseController {
     {
         $this->registry = $registry;
         $this->setPageTitle($this->pageTitle);
+        $b = $_SERVER['SERVER_NAME'];
+        if($b == "localhost")
+        {
+            $b = "http://".$b."/team/";
+        }
+        else
+        {
+            $b = "http://".$b."/";
+        }
+        $this->registry->template->page_base_patH =$b;
     }
 
     /**
