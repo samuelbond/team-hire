@@ -362,8 +362,9 @@
 
 <br />
 <div class="text-center">
-    <h3><span class="color">Brave</span>. Most Amazing Theme Ever Made. <span class="color">Literally</span>.</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut euismod sapien. Donec eu feugiat enim, sed tempus arcu. <br /> Pellentesque magna nisi, consectetur eget psum primis eros, et neque sit amet, lobortis elit. </p>
+    <h3>Our skills and talent will give you the satisfaction you need from your software project</h3>
+    <p>No matter how big or small your project is, we are more than capable to represent your needs in your software<br />
+       With our multi-talent team, there is always room for your project </p>
 </div>
 
 <div class="divider-1"></div>
@@ -378,9 +379,9 @@
                 <div class="img-box-3-icon bg-red">
                     <a href="#"><img src="view/img/flat-icons/6.png" alt="" class="img-responsive" /></a>
                 </div>
-                <h4><a href="#">Consequatr</a></h4>
+                <h4><a href="#">On-Time Delivery</a></h4>
                 <div class="bor bg-red"></div>
-                <p>Maiores alias consequatur aut perferendis doloribus asperiores repellat earum dolor.</p>
+               <p>Our process allows us to provide on-time delivery to our customers</p>
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
@@ -389,9 +390,9 @@
                 <div class="img-box-3-icon bg-lblue">
                     <a href="#"><img src="view/img/flat-icons/18.png" alt="" class="img-responsive" /></a>
                 </div>
-                <h4><a href="#">Doloribues</a></h4>
+                <h4><a href="#">Incremental Planning</a></h4>
                 <div class="bor bg-lblue"></div>
-                <p>Maiores alias consequatur aut perferendis doloribus asperiores repellat earum dolor.</p>
+                <p>We plan your project requirements as increments thereby prioritising your project</p>
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
@@ -400,9 +401,9 @@
                 <div class="img-box-3-icon bg-green">
                     <a href="#"><img src="view/img/flat-icons/17.png" alt="" class="img-responsive" /></a>
                 </div>
-                <h4><a href="#">Perferends</a></h4>
+                <h4><a href="#">Customer Friendly</a></h4>
                 <div class="bor bg-green"></div>
-                <p>Maiores alias consequatur aut perferendis doloribus asperiores repellat earum dolor.</p>
+                <p>We will hold your hands all through the way and even after deployment</p>
             </div>
         </div>
         <div class="col-md-3 col-sm-6">
@@ -411,9 +412,10 @@
                 <div class="img-box-3-icon bg-blue">
                     <a href="#"><img src="view/img/flat-icons/20.png" alt="" class="img-responsive" /></a>
                 </div>
-                <h4><a href="#">Repellat</a></h4>
+                <h4><a href="#">After Release Care</a></h4>
                 <div class="bor bg-blue"></div>
-                <p>Maiores alias consequatur aut perferendis doloribus asperiores repellat earum dolor.</p>
+                <p>After your project has been released, we offer an after release care that will always keep
+                    your project updated with the latest releases your project requires.</p>
             </div>
         </div>
     </div>
@@ -424,18 +426,16 @@
 <div class="divider-1"></div>
 
 <div class="block-heading-two">
-    <h3><span>Our Company</span></h3>
+    <h3><span>Who We Are</span></h3>
 </div>
 
 <div class="row">
     <div class="col-md-4 col-sm-6">
-        <p>Lorem ipsum dolor sit amet,  tetur adipiscing elit. Sed ut euismod sapien. Donec eu feugiat enim, sed tempus arcu. Pellen tesque magna nisi, consec tetur eget psum primis eros,  et neque sit amet, lobortis auctor libero.</p>
+        <p>We are providing software application development outsourcing as a team of software developers and project managers with extensive experience and expert knowledge of all aspect of software development. Our goal is to employ reputable software development processes and paradigms in any project regardless of the size.</p>
         <ul class="list-2">
-            <li>Denounce 1with rhoncus  rhoncus indignation</li>
-            <li>Dislike rhoncus so rhoncus et  rhoncus demoralized</li>
-            <li>The charms rhoncus et rhoncus of the moment</li>
-            <li>That rhoncus cannot rhoncus rhoncus pain trouble</li>
-            <li>Dislike so rhoncus rhoncus and demoralized</li>
+            <li>We do technical writing</li>
+            <li>We do requirements specification and engineering</li>
+            <li>We develop bespoke custom software applications</li>
         </ul>
         <br />
     </div>
