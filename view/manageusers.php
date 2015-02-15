@@ -104,7 +104,7 @@
                                         <td>'.(($users['status'] == 0) ? "Not Activated" : (($users['status'] == 2) ? "Account Blocked" : (($users['status'] == 3) ? "Account Deleted" : "Activated"))).'</td>
                                         <td>'.$users['date_created'].'</td>
                                         <td>
-                                            <a href="#" onclick=\'postData(\'activate\', '.$users['userid'].')\' data-toggle="tooltip" title="Activate User"><span style="color:green;" class="fa fa-check"></span></a>
+                                            <a href="#" onclick=\'postData("activate", '.$users['userid'].')\' data-toggle="tooltip" title="Activate User"><span style="color:green;" class="fa fa-check"></span></a>
                                             <br />
                                             <a href="#" onclick=\'postData("deactivate", '.$users['userid'].')\' data-toggle="tooltip" title="Deactivate User"><span style="color:orange;" class="fa fa-remove"></span></a>
                                             <br />

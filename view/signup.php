@@ -118,7 +118,7 @@
                         </div>
                         <!-- Input box -->
                         <div class="ui-input">
-                            <textarea name="profile" class="form-control" placeholder="Your Profile" required="required" rows="1"></textarea>
+                            <input type="text" name="profile" class="form-control" placeholder="Your Job Title e.g Developer" required="required">
                         </div>
                     </div>
 					<div class="clearfix"></div>

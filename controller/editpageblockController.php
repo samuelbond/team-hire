@@ -10,6 +10,7 @@ namespace controller;
 
 
 use application\BaseController;
+use application\Template;
 use component\cms\Cms;
 use component\cms\CmsInjector;
 use component\cms\PageBlock;

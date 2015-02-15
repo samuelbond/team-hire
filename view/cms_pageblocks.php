@@ -120,16 +120,16 @@
                             <div class="shopping-pagination">
                                 <ul class="pagination">
                                     <?php
-                                    for($k = 1; $k < $totalPages; $k++)
+                                    for($k = 0; $k <= $totalPages; $k++)
                                     {
-                                        if($currentPage === $k)
+                                        if($currentPage === ($k +1))
                                         {
                                             echo '<li class="active">
-                                                        <a href="#">'.$k.' <span class="sr-only">(current)</span></a></li>';
+                                                        <a href="#">'.($k+1).' <span class="sr-only">(current)</span></a></li>';
                                         }
                                         else
                                         {
-                                            echo '<li><a href="myblog?page='.$k.'">'.$k.'</a></li>';
+                                            echo '<li><a href="cmspageblock?page='.($k+1).'">'.($k+1).'</a></li>';
                                         }
 
                                     }

@@ -5,9 +5,17 @@
     <!-- Title here -->
     <title><?php echo $pageTitle; ?></title>
     <!-- Description, Keywords and Author -->
-    <meta name="description" content="Your description">
-    <meta name="keywords" content="Your,Keywords">
-    <meta name="author" content="ResponsiveWebInc">
+    <meta name="description" content="<?php if(isset($site_headers) && is_array($site_headers) && isset($site_headers[0])){
+        $kw = ((strpos($site_headers[0]['content'], "<p>") !== false) ? str_replace("<p>", "", $site_headers[0]['content']) : $site_headers[0]['content']);
+        $kw = ((strpos($kw, "</p>") !== false) ? str_replace("</p>", "", $kw) : $kw);
+        echo $kw;
+    }else{echo "Software team for hire"; } ?>">
+    <meta name="keywords" content="<?php if(isset($site_headers) && is_array($site_headers) && isset($site_headers[1])){
+        $kw = ((strpos($site_headers[1]['content'], "<p>") !== false) ? str_replace("<p>", "", $site_headers[1]['content']) : $site_headers[1]['content']);
+        $kw = ((strpos($kw, "</p>") !== false) ? str_replace("</p>", "", $kw) : $kw);
+        echo $kw;
+    }else{echo "Software team for hire"; } ?>">
+    <meta name="author" content="Team Hire">
     <base href="<?php echo $page_base_patH; ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -56,7 +64,7 @@
             <i class="fa fa-envelope color"></i> &nbsp; <a href="mailto:contact@domain.com"><b>info@teamhire.co.uk</b></a>
             &nbsp;&nbsp;
             <!-- Phone -->
-            <i class="fa fa-phone color"></i> &nbsp; <b>+44 (78)-(1821)-0052</b>
+            <i class="fa fa-phone color"></i> &nbsp; <b>+44 (844)-(804)-(0326)</b>
         </div>
         <!-- Contact ends -->
 
@@ -81,10 +89,10 @@
         <div class="tb-social pull-right">
             <div class="brand-bg text-right">
                 <!-- Brand Icons -->
-                <a href="#" class="facebook"><i class="fa fa-facebook square-2 rounded-1"></i></a>
-                <a href="#" class="twitter"><i class="fa fa-twitter square-2 rounded-1"></i></a>
-                <a href="#" class="google-plus"><i class="fa fa-google-plus square-2 rounded-1"></i></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin square-2 rounded-1"></i></a>
+                <a href="<?php echo ((isset($facebook)) ? $facebook : ""); ?>" class="facebook"><i class="fa fa-facebook square-2 rounded-1"></i></a>
+                <a href="<?php echo ((isset($twitter)) ? $twitter : ""); ?>" class="twitter"><i class="fa fa-twitter square-2 rounded-1"></i></a>
+                <a href="<?php echo ((isset($googlePlus)) ? $googlePlus : ""); ?>" class="google-plus"><i class="fa fa-google-plus square-2 rounded-1"></i></a>
+                <a href="<?php echo ((isset($linkedIn)) ? $linkedIn : ""); ?>" class="linkedin"><i class="fa fa-linkedin square-2 rounded-1"></i></a>
             </div>
         </div>
         <!-- Social media ends -->
@@ -112,27 +120,17 @@
                 <div class="navy">
                     <ul>
                         <!-- Main menu -->
-                        <li><a href="#">Home</a></li>
+                        <?php
 
-                        <li><a href="#">About Us</a></li>
+                        if(isset($site_menus) && is_array($site_menus))
+                        {
+                            foreach($site_menus as $site_menu)
+                            {
+                                echo "<li><a href='".$site_menu['link']."' >".$site_menu['title']."</a></li>";
+                            }
+                        }
+                        ?>
 
-                        <li><a href="#">Our Services</a></li>
-
-                        <li><a href="#">Our Team</a></li>
-
-                        <li><a href="#">Our Technologies</a></li>
-
-                        <li><a href="#">How It Works</a>
-                            <ul>
-                                <li><a href="sitemap.html">Development Process</a></li>
-                                <li><a href="index.html">Project Management</a></li>
-                                <li><a href="index-bootstrap-carousel.html">Maintenance and Change Strategy</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#">Our Blog</a></li>
-
-                        <li><a href="contact-us-one.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- Navigation ends -->

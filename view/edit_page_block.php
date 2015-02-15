@@ -5,6 +5,7 @@
 ?>
 
 <script src="view/ckeditor/ckeditor.js"></script>
+<script src="view/ckeditor/config.js"></script>
 
 <!-- Main content starts -->
 

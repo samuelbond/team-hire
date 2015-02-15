@@ -236,6 +236,8 @@ class DoctrineDAO extends UserManagerDAO{
                     "userid" => $userEntity->getUserId(),
                     "email" => $userEntity->getEmail(),
                     "status" => $userEntity->getStatus(),
+                    "job_title" => $userEntity->getProfile(),
+                    "picture" => ((is_null($userEntity->getProfilePicture())) ? "view".DIRECTORY_SEPARATOR."profile-pictures".DIRECTORY_SEPARATOR."default.png" : $userEntity->getProfilePicture()),
                     "date_created" => $userEntity->getDateCreated()->format('g:ia \o\n l jS F Y'),
                 );
             }

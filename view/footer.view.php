@@ -8,28 +8,17 @@
                 <!-- Foot Item -->
                 <div class="foot-item">
                     <!-- Heading -->
-                    <h5 class="bold"><i class="fa fa-user"></i>&nbsp;&nbsp;Team Hire</h5>
-                    <p>Welcome to the Team Hire Blog, we share our thoughts, opinions and experience on various Information Technology topics</p>
+                    <h5 class="bold"><i class="fa fa-user"></i>&nbsp;&nbsp;<?php echo ((isset($site_footer) && is_array($site_footer) && isset($site_footer[0]['title'])) ? $site_footer[0]['title'] : ""); ?></h5>
+                    <?php echo ((isset($site_footer) && is_array($site_footer) && isset($site_footer[0]['content'])) ? substr($site_footer[0]['content'], 0, 192)."..." : ""); ?>
                     <div class="brand-bg">
                         <!-- Social Media Icons -->
-                        <a href="#" class="facebook"><i class="fa fa-facebook circle-3"></i></a>
-                        <a href="#" class="twitter"><i class="fa fa-twitter circle-3"></i></a>
-                        <a href="#" class="google-plus"><i class="fa fa-google-plus circle-3"></i></a>
-                        <a href="#" class="linkedin"><i class="fa fa-linkedin circle-3"></i></a>
-                        <a href="#" class="pinterest"><i class="fa fa-pinterest circle-3"></i></a>
+                        <a href="<?php echo ((isset($facebook)) ? $facebook : ""); ?>" class="facebook"><i class="fa fa-facebook circle-3"></i></a>
+                        <a href="<?php echo ((isset($twitter)) ? $twitter : ""); ?>" class="twitter"><i class="fa fa-twitter circle-3"></i></a>
+                        <a href="<?php echo ((isset($googlePlus)) ? $googlePlus : ""); ?>" class="google-plus"><i class="fa fa-google-plus circle-3"></i></a>
+                        <a href="<?php echo ((isset($linkedIn)) ? $linkedIn : ""); ?>" class="linkedin"><i class="fa fa-linkedin circle-3"></i></a>
                     </div>
                     <div class="subscribe-box">
-                        <h5 class="bold">Subscribe :</h5>
-                        <!-- Form -->
-                        <form role="form" method="post" action="subscribe">
-                            <!-- Input Group -->
-                            <div class="input-group">
-                                <input type="email" name="subscribe" class="form-control" placeholder="Enter Email Id">
-											<span class="input-group-btn">
-												<button class="btn btn-color" type="submit">Subscribe</button>
-											</span>
-                            </div>
-                        </form>
+
                     </div>
                 </div>
             </div>
@@ -50,7 +39,7 @@
                             Barking, London<br />
                             United Kingdom</p>
 
-                        <p class="tel"> <i class="fa fa-phone"></i> Tel : + (07) - 818 210052<br />
+                        <p class="tel"> <i class="fa fa-phone"></i> Tel : +44 (844)-(804)-(0326)<br />
                             <i class="fa fa-envelope"></i>  Mail : <a href="#">info@teamhire.co.uk</a><br />
                     </div>
                 </div>
@@ -204,7 +193,7 @@
             fullWidth:"off",
             forceFullWidth:"off",
             fullScreen:"off",
-            fullScreenOffsetContainer:"#topheader-to-offset",
+            fullScreenOffsetContainer:"#topheader-to-offset"
 
         });
     });
@@ -212,7 +201,35 @@
 <!-- Custom JS. Type your JS code in custom.js file -->
 <script src="view/js/custom.js"></script>
 
+<form id="form" method="POST" style="display:none">
+</form>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    function postData(attrName,attrValue){
+        var input  = $('<input/>',{type:'hidden',name:attrName,value:attrValue});
+        $('#form').append(input).submit();
+    }
 
+    function sendSearch()
+    {
+        var term = document.getElementById("searchTerm1").value;
+        window.location.href = 'blog/search/'+term;
+    }
+
+    function sendSearch2()
+    {
+        var term = document.getElementById("searchTerm2").value;
+        window.location.href = 'blog/search/'+term;
+    }
+
+    function contactAuthor(entryId)
+    {
+        var elem = document.getElementById("entryId");
+        elem.value = entryId;
+    }
+</script>
 
 <!--
 Style switcher. This is just for demo purpose only.

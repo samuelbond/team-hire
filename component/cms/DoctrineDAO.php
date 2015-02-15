@@ -51,7 +51,24 @@ class DoctrineDAO extends CmsDAO{
     {
         try
         {
-            $block = $this->entityManager->getRepository("model\\entities\\CmsPageBlocks")->findBy(array("id" => $pageBlock->getId()));
+            $block = array();
+
+            if(!is_null($pageBlock->getId()) && $pageBlock->getId() > 0)
+            {
+                $block = $this->entityManager->getRepository("model\\entities\\CmsPageBlocks")->findBy(array("id" => $pageBlock->getId()));
+            }
+
+            if(!is_null($pageBlock->getStatus()) && is_null($pageBlock->getId()))
+            {
+                $block = $this->entityManager->getRepository("model\\entities\\CmsPageBlocks")->findBy(array("status" => $pageBlock->getStatus()));
+            }
+
+            if(!is_null($pageBlock->getPage()))
+            {
+                $query = $this->entityManager->createQuery("SELECT pb, p FROM model\\entities\\CmsPageBlocks pb JOIN pb.cmsPage p  WHERE pb.status = 1 AND p.pageTitle = "."'".$pageBlock->getPage()."'");
+                $block = $query->getResult();
+            }
+
             if(is_array($block) && sizeof($block) > 0)
             {
                 $this->currentEntity = $block[0];
@@ -451,6 +468,7 @@ class DoctrineDAO extends CmsDAO{
         }
         catch(\Exception $ex)
         {
+            echo $ex->getMessage();
             return false;
         }
     }
