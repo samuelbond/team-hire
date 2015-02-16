@@ -40,21 +40,13 @@
             <!-- Bootstrap indicators. If you don't need indicators, remove the below section -->
             <ol class="carousel-indicators">
                 <li data-target="#bs-carousel-1" data-slide-to="0" class="active"></li>
-                <li data-target="#bs-carousel-1" data-slide-to="1"></li>
-                <li data-target="#bs-carousel-1" data-slide-to="2"></li>
             </ol>
             <!-- Slides. You can also add captions -->
             <div class="carousel-inner">
                 <!-- Item, First item should have extra class "active" -->
                 <div class="item active">
                     <!-- Image -->
-                    <img src="view/img/aboutus/about-office-1.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="view/img/aboutus/about-office-2.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="view/img/aboutus/about-office-3.jpg" alt="">
+                    <img src="view/img/aboutus/about1.png" alt="">
                 </div>
             </div>
             <!-- Carousel controls (arrows). If you don't need controls, remove the below section -->
@@ -71,85 +63,6 @@
         <?php echo ((isset($about_us) && is_array($about_us) && isset($about_us[0]['content'])) ? $about_us[0]['content'] : "") ?>
     </div>
 </div>
-
-<hr />
-
-<div class="block-heading-two">
-    <h3><span>Our Service</span></h3>
-</div>
-
-<div class="icon-box-4">
-    <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <!-- Icon Box Four Item -->
-            <div class="icon-box-4-item">
-                <!-- Icon -->
-                <a href="#" class="icon-box-4-icon bg-color"> <i class="fa fa-cog"></i> </a>
-                <!-- Heading -->
-                <h4><a href="#">Web Designing</a></h4>
-                <!-- Paragraph -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="icon-box-4-item">
-                <a href="#" class="icon-box-4-icon bg-color"> <i class="fa fa-road"></i>  </a>
-                <h4><a href="#">Web Developing</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="icon-box-4-item">
-                <a href="#" class="icon-box-4-icon bg-color"> <i class="fa fa-qrcode"></i> </a>
-                <h4><a href="#">Mobile Apps</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="icon-box-4-item">
-                <a href="#" class="icon-box-4-icon bg-color"> <i class="fa fa-tags"></i> </a>
-                <h4><a href="#">UI Designing</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor consectetur adipisicing elit.</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-sm-6">
-            <!-- Icon Box Four Item -->
-            <div class="icon-box-4-item">
-                <!-- Icon -->
-                <a href="#" class="icon-box-4-icon bg-color"> <i class="fa fa-power-off"></i> </a>
-                <!-- Heading -->
-                <h4><a href="#">Web Designing</a></h4>
-                <!-- Paragraph -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="icon-box-4-item">
-                <a href="#" class="icon-box-4-icon bg-color"> <i class="fa fa-map-marker"></i> </a>
-                <h4><a href="#">Web Developing</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="icon-box-4-item">
-                <a href="#" class="icon-box-4-icon bg-color"> <i class="fa fa-umbrella"></i> </a>
-                <h4><a href="#">Mobile Apps</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="icon-box-4-item">
-                <a href="#" class="icon-box-4-icon bg-color"> <i class="fa fa-tint"></i> </a>
-                <h4><a href="#">UI Designing</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor consectetur adipisicing elit.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<hr />
 
 <div class="block-heading-two">
     <h3><span>Our Team</span></h3>

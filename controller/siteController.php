@@ -37,4 +37,26 @@ class siteController extends BaseController{
         $this->registry->template->our_team_members = $all;
         $this->registry->template->loadView("aboutus");
     }
+
+    public function ourservices()
+    {
+        $page = "our_services";
+        $item = new PageBlock();
+        $item->setPage(trim($page));
+        $cmsInjector = new CmsInjector();
+        $cms = (new Cms())->getInstance($cmsInjector);
+        $all_s = $cms->getCMSItem($item);
+        $this->registry->template->our_services = $all_s;
+        $main = array_slice($all_s, 6);
+        $this->registry->template->main_services = $main;
+        $page = "our_services_why_us";
+        $item->setPage(trim($page));
+        $this->registry->template->service_why = $cms->getCMSItem($item);
+        $this->registry->template->loadView("ourservices");
+    }
+
+    public function howitworks()
+    {
+        $this->registry->template->loadView("howitworks");
+    }
 } 
