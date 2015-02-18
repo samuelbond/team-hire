@@ -70,7 +70,7 @@
 
 <!-- Team starts -->
 <div class="team-six">
-    <div class="row">
+
 
             <!-- Team #2 member -->
 
@@ -78,39 +78,46 @@
 
                 if(isset($our_team_members) && is_array($our_team_members))
                 {
+                    $m = 1;
                     foreach($our_team_members as $team_member)
                     {
+                        if($m === 1 || $m === 5 || $m === 9 || $m === 13)
+                        {
+                            echo '<div class="row">';
+                        }
                         if($team_member['status'] == 1)
                         {
                             list($first, $last) = explode(" ", $team_member['fullname']);
                             echo '
- <div class="col-md-3 col-md-6">
-            <div class="team-member">
-                <!-- Image -->
-                <img class="img-responsive" src="'.$team_member['picture'].'" alt="" />
-                <div class="team-details">
-                    <span class="deg">'.$team_member['job_title'].'</span>
-                    <!-- Name -->
-                    <h4>'.$first.' '.substr($last, 0,1).'</h4>
-                    <!-- Para -->
-                    <p></p>
-                    <!-- Social -->
-                    <div class="team-links">
-						<a href="#"><i class="fa fa-envelope"></i></a>
-					</div>
-                    </div>
-                <div class="clearfix"></div>
-            </div>
-                    </div>
+
+            <div class="col-md-3 col-sm-6">
+									<!-- Team Member -->
+									<div class="team-member">
+										<!-- Image -->
+										<img class="img-responsive" src="'.$team_member['picture'].'" alt="" />
+										<!-- Name -->
+										<h4>'.$first.' '.substr($last, 0,1).'</h4>
+										<span class="deg">'.$team_member['job_title'].'</span>
+										<!-- Team Links -->
+										<div class="team-links">
+											<a href="#"><i class="fa fa-envelope"></i></a>
+										</div>
+									</div>
+								</div>
             ';
                         }
 
+                        if($m === 4 || $m === 8 || $m === 12 || $m === 16)
+                        {
+                            echo '</div>';
+                        }
+
+                        $m++;
                     }
                 }
 
             ?>
 
-    </div>
 </div>
 <!-- Team ends -->
 

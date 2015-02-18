@@ -38,6 +38,14 @@
                     <div class="our-process-item">
                         <a href="#" class="white bg-lblue"> <i class="fa fa-desktop"></i></a>
                         <img src="img/our-process/arrow.png" alt="" class="img-responsive hidden-sm hidden-xs" />
+                        <i class="fa fa-arrow-right"></i>
+                        <h4><?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[3]['title'])) ? $how_it_works[3]['title'] : ""); ?></h4>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="our-process-item">
+                        <a href="#" class="white bg-lblue"> <i class="fa fa-desktop"></i></a>
+                        <img src="img/our-process/arrow.png" alt="" class="img-responsive hidden-sm hidden-xs" />
                         <h4><?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[3]['title'])) ? $how_it_works[3]['title'] : ""); ?></h4>
                     </div>
                 </div>
