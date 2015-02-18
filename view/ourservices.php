@@ -119,6 +119,33 @@
 
         <br />
 
+        <!-- CTA starts -->
+        <div class="cta-one">
+            <!-- CTA One Content -->
+            <div class="cta-one-content">
+                <div class="row">
+                    <div class="col-md-5">
+                        <!-- CTA One Item -->
+                        <div class="cta-one-item">
+                            <h4>Ready to hire your new team of software developers?</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="cta-one-item">
+                            <ul class="list-2">
+                                <li><i class="fa fa-phone"></i>&nbsp;  Call us on <b>+44 (844)-(804)-(0326)</b></li>
+                                <li><i class="fa fa-envelope"></i>&nbsp;  Email us <b>sales@teamhire.co.uk</b></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="site/getquote" class="btn btn-color btn-lg"><i class="fa fa-reply"></i>&nbsp; Request a quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CTA ends -->
+
     </div>
 </div>
 

@@ -7,6 +7,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
-    config.extraPlugins = "base64image";
+    config.extraPlugins = "base64image,scayt";
+    config.removePlugins = 'autosave';
     config.allowedContent = true;
 };

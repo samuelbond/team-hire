@@ -7,10 +7,7 @@
 
     <div class="page-heading-two">
         <div class="container">
-            <h2>Our Process <span>Something goes here</span></h2>
-            <div class="breads">
-                Home / <a href="#">Page</a> / <a href="#">Sub Page</a>
-            </div>
+            <h2><?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[0]['content'])) ? $how_it_works[0]['content'] : ""); ?></h2>
             <div class="clearfix"></div>
         </div>
     </div>
@@ -21,7 +18,7 @@
 
         <!-- Heading -->
         <div class="block-heading-six">
-            <h4 class="bg-color">Our Process #1</h4>
+            <h4 class="bg-color"><?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[1]['content'])) ? $how_it_works[1]['content'] : ""); ?></h4>
         </div>
         <br />
         <div class="our-process">
@@ -34,28 +31,28 @@
                         <!-- Arrow Image -->
                         <img src="img/our-process/arrow.png" alt="" class="img-responsive hidden-sm hidden-xs" />
                         <!-- Heading -->
-                        <h4>Idea</h4>
+                        <h4><?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[2]['title'])) ? $how_it_works[2]['title'] : ""); ?></h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="our-process-item">
                         <a href="#" class="white bg-lblue"> <i class="fa fa-desktop"></i></a>
                         <img src="img/our-process/arrow.png" alt="" class="img-responsive hidden-sm hidden-xs" />
-                        <h4>Prototype</h4>
+                        <h4><?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[3]['title'])) ? $how_it_works[3]['title'] : ""); ?></h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="our-process-item">
                         <a href="#" class="white bg-green"> <i class="fa fa-code"></i></a>
                         <img src="img/our-process/arrow.png" alt="" class="img-responsive hidden-sm hidden-xs" />
-                        <h4>Coding</h4>
+                        <h4><?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[4]['title'])) ? $how_it_works[4]['title'] : ""); ?></h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="our-process-item">
                         <a href="#" class="white bg-purple"> <i class="fa fa-check-square-o"></i>
                         </a>
-                        <h4>Testing</h4>
+                        <h4><?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[5]['title'])) ? $how_it_works[5]['title'] : ""); ?></h4>
                     </div>
                 </div>
             </div>
@@ -68,7 +65,7 @@
 
         <!-- Heading -->
         <div class="block-heading-six">
-            <h4 class="bg-color">Our Process #2</h4>
+            <h4 class="bg-color">Here is what it all entails</h4>
         </div>
         <br />
 
@@ -80,8 +77,7 @@
                     <!-- Our process one item starts -->
                     <div class="op-one-item">
                         <h5 class="bg-red">Step 1</h5>
-                        <h4>Brain Storming</h4>
-                        <p>Cras justo odio, dapibus ac  in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum sit amet risus.</p>
+                        <?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[2]['content'])) ? $how_it_works[2]['content'] : ""); ?>
                     </div>
                     <!-- Our process one item ends -->
                 </div>
@@ -89,8 +85,7 @@
                     <!-- Our process one item starts -->
                     <div class="op-one-item">
                         <h5 class="bg-lblue">Step 2</h5>
-                        <h4>Drafting Prototype</h4>
-                        <p>Cras justo odio, dapibus ac  in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum sit amet risus.</p>
+                        <?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[3]['content'])) ? $how_it_works[3]['content'] : ""); ?>
                     </div>
                     <!-- Our process one item ends -->
                 </div>
@@ -98,17 +93,15 @@
                     <!-- Our process one item starts -->
                     <div class="op-one-item">
                         <h5 class="bg-green">Step 3</h5>
-                        <h4>Design & Development</h4>
-                        <p>Cras justo odio, dapibus ac  in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum sit amet risus.</p>
+                        <?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[4]['content'])) ? $how_it_works[4]['content'] : ""); ?>
                     </div>
                     <!-- Our process one item ends -->
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <!-- Our process one item starts -->
                     <div class="op-one-item">
-                        <h5 class="bg-yellow">Step 4</h5>
-                        <h4>Final Testing</h4>
-                        <p>Cras justo odio, dapibus ac  in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum sit amet risus.</p>
+                        <h5 class="bg-purple">Step 4</h5>
+                        <?php echo ((isset($how_it_works) && is_array($how_it_works) && isset($how_it_works[5]['content'])) ? $how_it_works[5]['content'] : ""); ?>
                     </div>
                     <!-- Our process one item ends -->
                 </div>

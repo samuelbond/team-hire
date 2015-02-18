@@ -57,6 +57,41 @@ class siteController extends BaseController{
 
     public function howitworks()
     {
+        $page = "how_it_works";
+        $item = new PageBlock();
+        $item->setPage(trim($page));
+        $cmsInjector = new CmsInjector();
+        $cms = (new Cms())->getInstance($cmsInjector);
+        $this->registry->template->how_it_works = $cms->getCMSItem($item);
         $this->registry->template->loadView("howitworks");
+    }
+
+    public function getquote()
+    {
+        $this->registry->template->loadView("quote");
+    }
+
+    public function contactus()
+    {
+        if(isset($_GET['status']))
+        {
+            $s = $_GET['status'];
+
+            if($s === "pass")
+            {
+                $this->registry->template->success = "Thank you for contacting us, we will get back to you as soon as possible";
+            }
+            else
+            {
+                $this->registry->template->error = "We are sorry you couldn't get through to us, please try again later";
+            }
+        }
+        $page = "contact_us";
+        $item = new PageBlock();
+        $item->setPage(trim($page));
+        $cmsInjector = new CmsInjector();
+        $cms = (new Cms())->getInstance($cmsInjector);
+        $this->registry->template->contact_us = $cms->getCMSItem($item);
+        $this->registry->template->loadView("contactus");
     }
 } 

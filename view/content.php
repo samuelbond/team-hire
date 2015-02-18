@@ -85,11 +85,6 @@
                         <!-- Sidebar Menu -->
                         <ul class="account-nav">
                             <li><a href="profile">My Profile</a></li>
-                            <li><a href="manageprofile">Manage Profile</a></li>
-                            <li><a href="manageusers">Manage Users</a></li>
-                            <li><a href="myblog">My Blog</a></li>
-                            <li><a href="publishblog">Publish Alerts</a></li>
-                            <li><a href="publishcomment">Blog Comments</a></li>
                         </ul>
 
                     </div>

@@ -65,7 +65,7 @@
 </div>
 
 <div class="block-heading-two">
-    <h3><span>Our Team</span></h3>
+    <h3><span>Your Team</span></h3>
 </div>
 
 <!-- Team starts -->
@@ -80,8 +80,10 @@
                 {
                     foreach($our_team_members as $team_member)
                     {
-                        list($first, $last) = explode(" ", $team_member['fullname']);
-                        echo '
+                        if($team_member['status'] == 1)
+                        {
+                            list($first, $last) = explode(" ", $team_member['fullname']);
+                            echo '
  <div class="col-md-3 col-md-6">
             <div class="team-member">
                 <!-- Image -->
@@ -101,6 +103,8 @@
             </div>
                     </div>
             ';
+                        }
+
                     }
                 }
 
