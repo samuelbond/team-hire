@@ -29,6 +29,12 @@
     <!-- Owl carousel -->
     <link href="view/css/owl.carousel.css" rel="stylesheet">
 
+    <!-- CSS for this page -->
+    <!-- Smart form -->
+    <link href="view/css/smart-forms.css" rel="stylesheet">
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="view/css/smart-forms-ie8.css">
+    <![endif]-->
 
     <!-- CSS for this page -->
     <!-- Revolution Slider -->
