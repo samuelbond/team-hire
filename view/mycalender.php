@@ -76,70 +76,32 @@
 
                             <br />
                             <div class="block-heading-two">
-                                <h3><span>All Pages</span></h3>
-                                 </div>
-
-                            <div class="rptable table-responsive">
-                                <table class="table table-bordered">
-                                    <!-- Table Header -->
-                                    <thead>
-                                    <tr>
-                                        <th>Title</th>
-                                        <th>Menu</th>
-                                        <th>Status</th>
-                                        <th>Date Created</th>
-                                        <th></th>
-                                    </tr>
-                                    </thead>
-                                    <!-- Table Body -->
-                                    <tbody>
-
-                                    <?php
-
-                                    foreach($pages as $page)
-                                    {
-                                        echo '
-                                            <tr>
-                                                <td><a href="reader?entry=" target="_blank">'.$page['title'].'</a></td>
-                                                <td>'.$page['menu'].'</td>
-                                                <td>'.(($page['status'] == 0) ? "Not Published" : (($page['status'] == 2) ? "Deleted" : "Published")).'</td>
-                                                <td>'.$page['date_created'].'</td>
-                                                <td>
-                                                <a href="editpage?edit_page='.$page['id'].'" data-toggle="tooltip" title="Edit"><span class="fa fa-edit color"></span></a>
-                                                <br />
-                                                <a href="editpage?page_publish='.$page['id'].'&status=1" data-toggle="tooltip" title="Publish"><span class="fa fa-print color"></span></a>
-                                                <br />
-                                                <a href="editpage?page_publish='.$page['id'].'&status=2" data-toggle="tooltip" title="Delete"><span class="fa fa-remove color"></span></a>
-                                                </td>
-                                            </tr>';
-                                    }
-                                    ?>
-                                    </tbody>
-                                </table>
+                                <h3><span>My Calender</span></h3>
                             </div>
 
-                            <!-- Pagination -->
-                            <div class="shopping-pagination">
-                                <ul class="pagination">
-                                    <?php
-                                    for($k = 0; $k <= $totalPages; $k++)
-                                    {
-                                        if($currentPage === ($k +1))
-                                        {
-                                            echo '<li class="active">
-                                                        <a href="#">'.($k+1).' <span class="sr-only">(current)</span></a></li>';
-                                        }
-                                        else
-                                        {
-                                            echo '<li><a href="cmspage?page='.($k+1).'">'.($k+1).'</a></li>';
-                                        }
+                            <!-- Responsive calendar - START -->
+                            <div class="responsive-calendar">
+                                <div class="controls">
+                                    <a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
+                                    <h4><span data-head-year></span> <span data-head-month></span></h4>
+                                    <a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
+                                </div><hr/>
+                                <div class="day-headers">
+                                    <div class="day header">Mon</div>
+                                    <div class="day header">Tue</div>
+                                    <div class="day header">Wed</div>
+                                    <div class="day header">Thu</div>
+                                    <div class="day header">Fri</div>
+                                    <div class="day header">Sat</div>
+                                    <div class="day header">Sun</div>
+                                </div>
+                                <div class="days" data-group="days">
 
-                                    }
-                                    ?>
-
-                                </ul>
+                                </div>
                             </div>
-                            <!-- Pagination end-->
+                            <!-- Responsive calendar - END -->
+
+
 
                         </div>
                     </div>

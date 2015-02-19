@@ -50,6 +50,10 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="#">
+
+    <!-- for my calender -->
+    <!-- Respomsive slider -->
+    <link href="view/css/responsive-calendar.css" rel="stylesheet">
 </head>
 
 <!-- Add class "boxed" along with body for boxed layout. -->

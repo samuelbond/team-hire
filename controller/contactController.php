@@ -29,6 +29,28 @@ class contactController extends BaseController{
                 header("Location: site/contactus?status=".$status);
                 return true;
             }
+
+
+            if(isset($_POST['proj_budget']))
+            {
+                $budget = trim($_POST['proj_budget']);
+                $deadLine = trim($_POST['proj_deadline']);
+                $project = trim($_POST['proj_desc']);
+                $name = trim($_POST['proj_name']);
+                $email = trim($_POST['proj_email']);
+                $phone = trim($_POST['proj_phone']);
+                $message = "The Customers Phone number: ".$phone." \r\n";
+                $message .= "The Customers email address ".$email." \r\n";
+                $message .= "The customers budget ".$budget." \r\n";
+                $message .= "The customers expected deadline (in weeks) ".$deadLine." \r\n";
+                $message .= "The customers project description ".$project." \r\n";
+
+                $to = "sales@teamhire.co.uk";
+                $o = $this->sendMail($name, $email, $message, $to);
+                $status = (($o === true) ? "pass" : "failed");
+                header("Location: site/contactus?status=".$status);
+                return true;
+            }
         }
 
 

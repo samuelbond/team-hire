@@ -153,6 +153,7 @@
                         <!-- Sidebar Menu -->
                         <ul class="account-nav">
                             <li><a href="profile">My Profile</a></li>
+                            <li><a href="mycalender">My Calender</a> </li>
                             <li><a href="manageusers">Manage Users</a></li>
                             <li><a href="cmsmanager">New CMS Entry</a></li>
                             <li><a href="cmspage">CMS Page</a></li>
