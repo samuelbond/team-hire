@@ -22,7 +22,6 @@ class contactController extends BaseController{
                 $name = trim($_POST['fullname']);
                 $email = trim($_POST['email']);
                 $message = trim($_POST['message']);
-                //$to = "info@teamhire.co.uk";
                 $to = "info@teamhire.co.uk";
                 $o = $this->sendMail($name, $email, $message, $to);
                 $status = (($o === true) ? "pass" : "failed");
@@ -45,10 +44,11 @@ class contactController extends BaseController{
                 $message .= "The customers expected deadline (in weeks) ".$deadLine." \r\n";
                 $message .= "The customers project description ".$project." \r\n";
 
-                $to = "sales@teamhire.co.uk";
+                //$to = "sales@teamhire.co.uk";
+                $to = "info@platitech.co.uk";
                 $o = $this->sendMail($name, $email, $message, $to);
                 $status = (($o === true) ? "pass" : "failed");
-                header("Location: site/contactus?status=".$status);
+                header("Location: site/getquote?status=".$status);
                 return true;
             }
         }
@@ -65,7 +65,7 @@ class contactController extends BaseController{
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
         $mail = mail($receiverEmail, "Notification From Team Hire", $message, $headers);
-
+        print_r(error_get_last());
         if($mail === true)
         {
             return true;

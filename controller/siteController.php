@@ -68,6 +68,19 @@ class siteController extends BaseController{
 
     public function getquote()
     {
+        if(isset($_GET['status']))
+        {
+            $s = $_GET['status'];
+
+            if($s === "pass")
+            {
+                $this->registry->template->success = "Thank you for contacting us, we will get back to you as soon as possible";
+            }
+            else
+            {
+                $this->registry->template->error = "We are sorry you couldn't get through to us, please try again later";
+            }
+        }
         $this->registry->template->loadView("quote");
     }
 

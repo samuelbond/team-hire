@@ -111,7 +111,7 @@
             <div class="modal-body">
                 <!-- Smart form starts -->
                 <div class="smart-forms">
-                <form method="post" action="/" id="form-elements">
+                <form method="post" action="contact" id="form-elements">
 
                     <h4>Tell us about your project</h4>
 
