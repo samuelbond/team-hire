@@ -51,34 +51,81 @@
                     ?>
                     <!-- Contact Form -->
                     <div class="contact-form">
-                        <h5>Get a quote <small>Tell us about your project</small></h5>
-                        <!-- Form -->
-                        <form class="form" role="form">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <input name="c_fullname" type="text" class="form-control" placeholder="Enter Name">
-                                    </div>
+                        <!-- Smart form starts -->
+                        <div class="smart-forms">
+                            <form method="post" action="contact" id="form-elements">
+
+                                <h4>Tell us about your project</h4>
+
+                                <div class="section">
+                                    <label for="amount">Maximum budget for project:</label>
+                                    <input type="text" name="proj_budget" id="amount" class="slider-input">
+                                    <br /><br />
+                                    <div class="slider-wrapper yellow-slider">
+                                        <div id="slider2"></div>
+                                    </div><!-- end .slider-wrapper -->
+                                </div><!-- end section -->
+
+                                <div class="section">
+                                    <label for="bedrooms">Expected Deadline <small>[ in weeks ]</small></label>
+                                    <input type="text" name="proj_deadline" id="bedrooms" class="slider-input">
+                                    <br /><br />
+                                    <div class="slider-wrapper blue-slider">
+                                        <div id="slider3"></div>
+                                    </div><!-- end .slider-wrapper -->
+                                </div><!-- end section -->
+
+                                <!-- Textarea -->
+                                <div class="section">
+                                    <!-- Label -->
+                                    <label for="textarea" class="field-label">Describe your project</label>
+                                    <label class="field prepend-icon">
+                                        <textarea class="gui-textarea" id="textarea" name="proj_desc" placeholder="Everything starts with an idea"></textarea>
+                                        <label class="field-icon"><i class="fa fa-lock"></i></label>
+                                        <!-- Small hint block -->
+											<span class="input-hint">
+												Tell us about your idea for your project
+											</span>
+                                    </label>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <input name="c_email" type="email" class="form-control" placeholder="Enter Email">
-                                    </div>
+
+                                <!-- Simple text box -->
+                                <div class="section">
+                                    <!-- Label -->
+                                    <label for="simple-text" class="field-label">Your Name or Company Name</label>
+                                    <label class="field">
+                                        <!-- Input box -->
+                                        <input type="text" name="proj_name" id="simple-text" class="gui-input" placeholder="John Doe">
+                                    </label>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <input name="phone" type="text" class="form-control" placeholder="Enter Phone">
-                                    </div>
+
+                                <!-- Simple text box -->
+                                <div class="section">
+                                    <!-- Label -->
+                                    <label for="simple-text" class="field-label">Your Email</label>
+                                    <label class="field">
+                                        <!-- Input box -->
+                                        <input type="email" name="proj_email" id="simple-text" class="gui-input" placeholder="youremail@domain.com">
+                                    </label>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <textarea name="project_message" class="form-control" id="comments" rows="8" placeholder="Enter Message"></textarea>
-                            </div>
-                            <!-- Button -->
-                            <button type="submit" class="btn btn-red">Submit</button>&nbsp;
-                            <button type="reset" class="btn btn-default">Reset</button>
-                        </form>
+
+                                <!-- Simple text box -->
+                                <div class="section">
+                                    <!-- Label -->
+                                    <label for="simple-text" class="field-label">Your Phone</label>
+                                    <label class="field">
+                                        <!-- Input box -->
+                                        <input type="text" name="proj_phone" id="simple-text" class="gui-input" placeholder="07245845250">
+                                    </label>
+                                </div>
+
+                                <div class="section">
+                                    <button type="submit" class="btn btn-red">Submit</button>&nbsp;
+                                </div>
+
+                            </form>
                     </div>
+                     </div>
 
                     <br />
 
