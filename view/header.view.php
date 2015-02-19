@@ -49,7 +49,7 @@
     <link href="view/css/custom.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="view/img/favicon.ico">
 
     <!-- for my calender -->
     <!-- Respomsive slider -->
