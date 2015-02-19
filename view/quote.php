@@ -59,7 +59,7 @@
 
                                 <div class="section">
                                     <label for="amount">Maximum budget for project:</label>
-                                    <input type="text" name="proj_budget" id="amount" class="slider-input">
+                                    <input type="text" name="proj_budget" id="amount" class="slider-input" required>
                                     <br /><br />
                                     <div class="slider-wrapper yellow-slider">
                                         <div id="slider2"></div>
@@ -68,7 +68,7 @@
 
                                 <div class="section">
                                     <label for="bedrooms">Expected Deadline <small>[ in weeks ]</small></label>
-                                    <input type="text" name="proj_deadline" id="bedrooms" class="slider-input">
+                                    <input type="text" name="proj_deadline" id="bedrooms" class="slider-input" required>
                                     <br /><br />
                                     <div class="slider-wrapper blue-slider">
                                         <div id="slider3"></div>
@@ -80,7 +80,7 @@
                                     <!-- Label -->
                                     <label for="textarea" class="field-label">Describe your project</label>
                                     <label class="field prepend-icon">
-                                        <textarea class="gui-textarea" id="textarea" name="proj_desc" placeholder="Everything starts with an idea"></textarea>
+                                        <textarea class="gui-textarea" id="textarea" name="proj_desc" placeholder="Everything starts with an idea" required="required"></textarea>
                                         <label class="field-icon"><i class="fa fa-lock"></i></label>
                                         <!-- Small hint block -->
 											<span class="input-hint">
@@ -95,7 +95,7 @@
                                     <label for="simple-text" class="field-label">Your Name or Company Name</label>
                                     <label class="field">
                                         <!-- Input box -->
-                                        <input type="text" name="proj_name" id="simple-text" class="gui-input" placeholder="John Doe">
+                                        <input type="text" name="proj_name" id="simple-text" class="gui-input" placeholder="John Doe" required>
                                     </label>
                                 </div>
 
@@ -105,7 +105,7 @@
                                     <label for="simple-text" class="field-label">Your Email</label>
                                     <label class="field">
                                         <!-- Input box -->
-                                        <input type="email" name="proj_email" id="simple-text" class="gui-input" placeholder="youremail@domain.com">
+                                        <input type="email" name="proj_email" id="simple-text" class="gui-input" placeholder="youremail@domain.com" required>
                                     </label>
                                 </div>
 
@@ -115,7 +115,7 @@
                                     <label for="simple-text" class="field-label">Your Phone</label>
                                     <label class="field">
                                         <!-- Input box -->
-                                        <input type="text" name="proj_phone" id="simple-text" class="gui-input" placeholder="07245845250">
+                                        <input type="text" name="proj_phone" id="simple-text" class="gui-input" placeholder="07245845250" required>
                                     </label>
                                 </div>
 
