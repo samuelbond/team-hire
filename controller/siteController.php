@@ -25,6 +25,7 @@ class siteController extends BaseController{
 
     public function aboutus()
     {
+        $this->setPageTitle("TeamHire is a team of software developers & project managers");
         $injector = new UserManagerInjector();
         $userManager = (new UserManager())->getInstance($injector);
         $all = $userManager->getAllUsers();
@@ -40,6 +41,7 @@ class siteController extends BaseController{
 
     public function ourservices()
     {
+        $this->setPageTitle("We offer software development outsourcing services");
         $page = "our_services";
         $item = new PageBlock();
         $item->setPage(trim($page));
@@ -57,6 +59,7 @@ class siteController extends BaseController{
 
     public function howitworks()
     {
+        $this->setPageTitle("Let us show you how it works");
         $page = "how_it_works";
         $item = new PageBlock();
         $item->setPage(trim($page));
@@ -68,6 +71,7 @@ class siteController extends BaseController{
 
     public function getquote()
     {
+        $this->setPageTitle("Tell us about your project");
         if(isset($_GET['status']))
         {
             $s = $_GET['status'];
@@ -86,6 +90,7 @@ class siteController extends BaseController{
 
     public function contactus()
     {
+        $this->setPageTitle("How to contact us");
         if(isset($_GET['status']))
         {
             $s = $_GET['status'];
