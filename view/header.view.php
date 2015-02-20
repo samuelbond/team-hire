@@ -16,6 +16,7 @@
         echo $kw;
     }else{echo "Software team for hire"; } ?>">
     <meta name="author" content="Team Hire">
+    <meta name="google-site-verification" content="xSID3TrtmI05ccYP-YATYsAlYGKmVkzh5-S4_rWlpIg" />
     <base href="<?php echo $page_base_patH; ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

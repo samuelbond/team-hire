@@ -35,7 +35,7 @@
                         <!-- Paragraph -->
 
                         <p class="add">
-                            BEC, 50 Cambridge Road<br />
+                            48A Essex Road<br />
                             Barking, London<br />
                             United Kingdom</p>
 
