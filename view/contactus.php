@@ -45,7 +45,7 @@
         ?>
         <div class="contact-map">
             <!-- Map Link -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2481.569904576026!2d0.07809099999999998!3d51.53944799999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a66c43096c29%3A0xa7852b0789d44e12!2sBarking+Enterprise+Centre!5e0!3m2!1sen!2suk!4v1424275535732" ></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2481.745292588944!2d0.08833849999999999!3d51.5362314!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a674abb6d1cf%3A0x1e5c5c14bf134263!2s48A+Essex+Rd%2C+Barking%2C+Greater+London+IG11+7QL!5e0!3m2!1sen!2suk!4v1424708186268" width="600" height="450" frameborder="0" style="border:0"></iframe>
         </div>
 
         <br />
