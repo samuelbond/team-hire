@@ -87,7 +87,15 @@
                         }
                         if($team_member['status'] == 1)
                         {
-                            list($first, $last) = explode(" ", $team_member['fullname']);
+                            if(strpos(trim($team_member['fullname']), " ") !== false)
+                            {
+                                list($first, $last) = explode(" ", $team_member['fullname']);
+                                $name = $first.' '.substr($last, 0,1);
+                            }
+                            else
+                            {
+                                $name = $team_member['fullname'];
+                            }
                             echo '
 
             <div class="col-md-3 col-sm-6">
@@ -96,7 +104,7 @@
 										<!-- Image -->
 										<img class="img-responsive" src="'.$team_member['picture'].'" alt="" />
 										<!-- Name -->
-										<h4>'.$first.' '.substr($last, 0,1).'</h4>
+										<h4>'.$name.'</h4>
 										<span class="deg">'.$team_member['job_title'].'</span>
 										<!-- Team Links -->
 										<div class="team-links">
